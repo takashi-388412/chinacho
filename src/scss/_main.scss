@@ -93,11 +93,27 @@ body {
 // ==================================
 // header
 // ==================================
+.header {
+  position: fixed;
+}
+.nav-list {
 
+}
+.nav-item {
+  display: inline-block;
+}
 // ==================================
 // hero
 // ==================================
-
+.hero {
+  background-image: url('../../src/img/sunset.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+}
 // ==================================
 // concept
 // ==================================
