@@ -71,6 +71,7 @@ body {
 // などの何回も使う部品)
 // ==================================
 .heading {
+  margin: 0 0 2em;
   position: relative;
   display: inline-block;
   font-size: 1.6rem;
@@ -89,7 +90,18 @@ body {
     bottom: -5px;
   }
 }
-
+.btn {
+  margin: 2em 0 0;
+  text-align: center;
+  .more {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
 // ==================================
 // header
 // ==================================
@@ -117,23 +129,156 @@ body {
 // ==================================
 // concept
 // ==================================
-
+.concept {
+  margin: 2em 0 0;
+  padding: 0 2em;
+  &-title {
+    float: left;
+  }
+  &-img {
+    width: 40%;
+    float: left;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  &-intro {
+    width: 50%;
+    float: right;
+  }
+}
 // ==================================
 // news
 // ==================================
-
+.news {
+  margin: 5em 0 0;
+  padding: 0 2em;
+  &-title {
+    float: right;
+  }
+  &-contents {
+    text-align: center;
+    .content {
+      display: block;
+      line-height: 2em;
+      &-date {
+        margin: 0 1em 0 0;
+      }
+    }
+  }
+}
 // ==================================
 // hairstyle
 // ==================================
-
+.hairstyle {
+  margin: 5em 0 0;
+  padding: 0 2em;
+  &-title {
+    float: left;
+  }
+  .imgs {
+    &-left {
+      width: 49%;
+      float: left;
+    }
+    &-right {
+      width: 49%;
+      float: right;
+    }
+  }
+  .img {
+    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
 // ==================================
 // pricelist
 // ==================================
-
+.pricelist {
+  margin: 5em 0 0;
+  padding: 0 2em;
+  &-title {
+    float: right;
+  }
+  &-img {
+    width: 40%;
+    float: left;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .menu {
+    float: right;
+    text-align: center;
+    p {
+      line-height: 1.5em;
+      span {
+        margin: 0 0 0 1em;
+        text-align: right;
+      }
+    }
+  }
+}
 // ==================================
 // shopinfo
 // ==================================
-
+.shopinfo {
+  margin: 5em 0 0;
+  padding: 0 2em;
+  &-title {
+    float: left;
+  }
+  .wrapper {
+    .info {
+      .map {
+        color: white;
+        height: 10em;
+        background-color: black;
+      }
+      h3 {
+        margin: 1em 0;
+        font-size: 1.4em;
+      }
+      .intro {
+        .title {
+          margin: 0 1em 0 0;
+        }
+      }
+    }
+  }
+}
+// ==================================
+// reserve-btn
+// ==================================
+.reserve-btn {
+  position: fixed;
+  bottom: 7em;
+  right: 1em;
+  a {
+    padding: .5em;
+    text-align: center;
+    display: block;
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    opacity: .5;
+    &:hover {
+      opacity: .7;
+    }
+    span {
+      display: block;
+    }
+  }
+}
 // ==================================
 // footer
 // ==================================
+.footer {
+  text-align: center;
+}
