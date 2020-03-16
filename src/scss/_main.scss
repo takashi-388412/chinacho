@@ -260,21 +260,44 @@ body {
 .concept {
   margin: 2em 0 0;
   padding: 0 2em;
+  @include tb {
+    padding: 0 5em;
+  }
+  @include pc {
+    padding: 0 8em;
+  }
   &-title {
     float: left;
   }
   &-img {
+    @include tb {
+      width: 50%;
+      float: left;
+    }
     img {
       width: 95%;
       margin: 0 auto;
       height: auto;
       display: block;
+      @include tb {
+        width: 100%;
+      }
     }
   }
   &-intro {
+    @include tb {
+      width: 45%;
+      float: right;
+    }
     width: 90%;
     margin: 1.5em auto 0;
     text-align: center;
+    @include tb {
+      margin: 0 auto;
+    }
+    @include pc {
+      margin: 12% 0 0;
+    }
     p {
       line-height: 2em;
     }
@@ -286,6 +309,12 @@ body {
 .news {
   margin: 5em 0 0;
   padding: 0 2em;
+  @include tb {
+    padding: 0 5em;
+  }
+  @include pc {
+    padding: 0 8em;
+  }
   &-title {
     float: right;
   }
@@ -306,6 +335,12 @@ body {
 .hairstyle {
   margin: 5em 0 0;
   padding: 0 2em;
+  @include tb {
+    padding: 0 5em;
+  }
+  @include pc {
+    padding: 0 8em;
+  }
   &-title {
     float: left;
   }
@@ -313,10 +348,18 @@ body {
     &-left {
       width: 49%;
       float: left;
+      @include pc {
+        width: 40%;
+        margin: 0 0 0 6em;
+      }
     }
     &-right {
       width: 49%;
       float: right;
+      @include pc {
+        width: 40%;
+        margin: 0 6em 0 0;
+      }
     }
   }
   .img {
@@ -333,20 +376,41 @@ body {
 .pricelist {
   margin: 5em 0 0;
   padding: 0 2em;
+  @include tb {
+    padding: 0 5em;
+  }
+  @include pc {
+    padding: 0 8em;
+  }
   &-title {
     float: right;
   }
   &-img {
+    @include tb {
+      float: left;
+      width: 50%;
+    }
     img {
       width: 95%;
       height: auto;
       margin: 0 auto;
       display: block;
+      @include tb {
+        width: 100%;
+      }
     }
   }
   .menu {
     margin: 1.5em 0 0;
     text-align: center;
+    @include tb {
+      width: 50%;
+      float: right;
+      margin: 0;
+    }
+    @include pc {
+      margin: 12% 0 0;
+    }
     p {
       line-height: 2em;
       span {
@@ -361,15 +425,34 @@ body {
 .shopinfo {
   margin: 5em 0 0;
   padding: 0 2em;
+  @include tb {
+    padding: 0 5em;
+  }
+  @include pc {
+    padding: 0 8em;
+  }
   &-title {
     float: left;
   }
   .wrapper {
+    @include tb {
+      position: relative;
+    }
+    .map {
+      text-align: center;
+      color: #a40000;
+      height: 10em;
+      background-color: #ddd;
+      @include tb {
+        height: 25em;
+      }
+    }
     .info {
-      .map {
-        color: white;
-        height: 10em;
-        background-color: black;
+      @include tb {
+        position: absolute;
+        bottom: 2em;
+        left: 2em;
+        z-index: 9999;
       }
       h3 {
         margin: 1.5em 0 1em;
