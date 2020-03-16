@@ -11,9 +11,9 @@ $(function () {
     $(this).toggleClass('active');
     sp_menu_target.toggleClass('active');
   });
-  // // 【sp】リンク内クリック時の動作
-  // $('.nav-item a').on('click', function () {
-  //   sp_menu.removeClass('active');
-  //   sp_menu_target.removeClass('active');
-  // });
+  // 【sp】リンク内クリック時の動作
+  $('.nav-item a').on('click', function () {
+    sp_menu.removeClass('active');
+    sp_menu_target.removeClass('active');
+  });
 });
