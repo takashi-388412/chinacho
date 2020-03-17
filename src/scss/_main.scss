@@ -561,7 +561,7 @@ animation-fill-mode: both;
   position: fixed;
   bottom: 7em;
   right: 1em;
-  z-index: 0; //重なり 1番下(z-index: 0;だとドロワーメニューで効かない)
+  z-index: 0; 
   a {
     padding: .5em;
     text-align: center;
