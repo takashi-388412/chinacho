@@ -16,4 +16,17 @@ $(function () {
     sp_menu.removeClass('active');
     sp_menu_target.removeClass('active');
   });
+  //acMenu
+  jQuery( '.menu-1' ).on( 'click', function() {
+    jQuery( '.price-1' ).slideToggle(300);
+  });
+  jQuery( '.menu-2' ).on( 'click', function() {
+    jQuery( '.price-2' ).slideToggle(300);
+  });
+  jQuery( '.menu-3' ).on( 'click', function() {
+    jQuery( '.price-3' ).slideToggle(300);
+  });
+  jQuery( '.menu-4' ).on( 'click', function() {
+    jQuery( '.price-4' ).slideToggle(300);
+  });
 });

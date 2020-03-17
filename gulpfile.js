@@ -47,7 +47,7 @@ const paths = {
 gulp.task('sass', done => {
   gulp.src(paths.src.scss)
     // .pipe(plumber({ errorHandler: notify.onError('Error: &lt;%= error.message %&gt;') }))//watch中にエラーが起きても止まらない
-    .pipe(sourcemaps.init()) //順番大切
+    // .pipe(sourcemaps.init()) //順番大切
     .pipe(sassGlob()) //importの読み込みを簡潔にする
     .pipe(sass({
       importer: packageImporter({
@@ -62,7 +62,7 @@ gulp.task('sass', done => {
     .pipe(postcss([cssdeclsort({ order: 'alphabetical' })])) //cssの順番並び替え error
     .pipe(postcss([autoprefixer()]))//vendor prefix 付与 error
     .pipe(mmq()) //media queryを1箇所にまとめる
-    .pipe(sourcemaps.write()) //順番大切
+    // .pipe(sourcemaps.write()) //順番大切
     .pipe(plumber({ errorHandler: notify.onError('Error: &lt;%= error.message %&gt;') }))//watch中にエラーが起きても止まらない
     .pipe(gulp.dest(paths.dist.css))
     .pipe(cleanCSS())

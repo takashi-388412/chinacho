@@ -261,10 +261,10 @@ body {
   margin: 2em 0 0;
   padding: 0 2em;
   @include tb {
-    padding: 0 5em;
+    padding: 0 10em;
   }
   @include pc {
-    padding: 0 8em;
+    padding: 0 15em;
   }
   &-title {
     float: left;
@@ -310,23 +310,56 @@ body {
   margin: 5em 0 0;
   padding: 0 2em;
   @include tb {
-    padding: 0 5em;
+    padding: 0 10em;
   }
   @include pc {
-    padding: 0 8em;
+    padding: 0 15em;
   }
   &-title {
     float: right;
   }
-  &-contents {
-    text-align: center;
-    .content {
-      display: block;
-      line-height: 2em;
-      &-date {
-        margin: 0 1em 0 0;
-      }
-    }
+}
+#acMenu {
+  margin: 1.5em 3em 0;
+  text-align: center;
+  p {
+    padding: 1em 0;
+    border: solid 1px black;
+  }
+  li {
+    list-style: none;
+    line-height: 2em;
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
+  }
+  .menu-1 {
+    display: block;
+    cursor: pointer;
+  }
+  .price-1 {
+    display: none;
+  }
+  .menu-2 {
+    display: block;
+    cursor: pointer;
+  }
+  .price-2 {
+    display: none;
+  }
+  .menu-3 {
+    display: block;
+    cursor: pointer;
+  }
+  .price-3 {
+    display: none;
+  }
+  .menu-4 {
+    display: block;
+    cursor: pointer;
+  }
+  .price-4 {
+    display: none;
   }
 }
 // ==================================
@@ -336,10 +369,10 @@ body {
   margin: 5em 0 0;
   padding: 0 2em;
   @include tb {
-    padding: 0 5em;
+    padding: 0 10em;
   }
   @include pc {
-    padding: 0 8em;
+    padding: 0 15em;
   }
   &-title {
     float: left;
@@ -350,7 +383,6 @@ body {
       float: left;
       @include pc {
         width: 40%;
-        margin: 0 0 0 6em;
       }
     }
     &-right {
@@ -358,7 +390,6 @@ body {
       float: right;
       @include pc {
         width: 40%;
-        margin: 0 6em 0 0;
       }
     }
   }
@@ -377,10 +408,10 @@ body {
   margin: 5em 0 0;
   padding: 0 2em;
   @include tb {
-    padding: 0 5em;
+    padding: 0 10em;
   }
   @include pc {
-    padding: 0 8em;
+    padding: 0 15em;
   }
   &-title {
     float: right;
@@ -426,10 +457,10 @@ body {
   margin: 5em 0 0;
   padding: 0 2em;
   @include tb {
-    padding: 0 5em;
+    padding: 0 10em;
   }
   @include pc {
-    padding: 0 8em;
+    padding: 0 15em;
   }
   &-title {
     float: left;
