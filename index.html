@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Takenn</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
+<!-- swiper.js -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <!-- style -->
   <!-- <link rel="stylesheet" href="./dist/css/style.min.css">  -->
   <link rel="stylesheet" href="./dist/css/style.css"> 
 </head>
@@ -13,12 +16,6 @@
 <div id="wrapper">
   <!-- header -->
   <header class="header clearfix">
-  <!-- hamberger-menu -->
-  <div class="hamberger-menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
   <!-- title -->
   <h1 class="site-title"><a href="#">shinacho</a></h1>
   <!-- global-nav -->
@@ -32,12 +29,47 @@
         <li class="nav-item"><a href="#shopinfo">SHOPINFO</a></li>
       </ul>
     </nav>
+  <!-- hamberger-menu -->
+  <div class="hamberger-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
   </header>
 
   <!-- main -->
   <main class="main">
   <!-- hero image -->
-    <section class="hero"></section>
+    <section class="hero">
+    <!-- Slider main container -->
+      <div class="swiper-container">
+      <!-- Additional required wrapper -->
+        <!-- slider text -->
+        <div class="slide-text">
+          <p>shinacho</p>
+        </div>
+        <!-- slider image -->
+        <div class="swiper-wrapper">
+          <!-- Slides1 -->
+          <div class="swiper-slide">
+            <div class="slide-img" style="background-image: url('./src/img/house.jpg');"></div>
+          </div>
+          <!-- Slides2 -->
+          <div class="swiper-slide">
+            <div class="slide-img" style="background-image: url('./src/img/logo.jpg');"></div>
+          </div>
+          <!-- Slides3 -->
+          <div class="swiper-slide">
+            <div class="slide-img" style="background-image: url('./src/img/inside_store.jpg');"></div>
+          </div>
+          <!-- Slides4 -->
+          <div class="swiper-slide">
+            <div class="slide-img" style="background-image: url('./src/img/tool.jpg');"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
   <!-- concept -->
     <section class="concept clearfix" id="concept">
@@ -145,9 +177,24 @@
   </div>
 
 
-  <!-- js -->
+<!-- js -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- swiper.js -->
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script>
+var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+loop: true, // ループの指定
+effect: "fade", //フェードの指定
+autoplay: {
+delay: 4000, //４秒後に次のスライドへ
+disableOnInteraction: false //ユーザー側で操作してもスライドを止めない
+},
+speed: 2000, //２秒かけてフェードで切り替わる
+});
+</script>
 <!-- <script src="./src/bundle.js"></script> -->
+<!-- js -->
 <script src="./src/app.js"></script>
 </body>
 </html>

@@ -212,16 +212,18 @@ i {
 
 .header {
 	background: rgba(0, 0, 0, 0.85);
-	height: 58px;
 	padding: 10px;
 	position: fixed;
 	width: 100%;
+	z-index: 5;
 }
 
 .site-title {
 	float: left;
+	font-weight: bold;
 	height: 100%;
 	padding-left: 1em;
+	position: relative;
 }
 
 .site-title a {
@@ -297,7 +299,6 @@ i {
 	display: table;
 	float: right;
 	height: 100vh;
-	margin-top: 58px;
 	position: absolute;
 	right: -100%;
 	top: 0;
@@ -336,14 +337,44 @@ i {
 	opacity: 0.5;
 }
 
-.hero {
-	background-attachment: fixed;
-	background-image: url("../../src/img/sunset.jpg");
-	background-position: center;
+.slide-text {
+	color: #fff;
+	font-size: 2.5em;
+	font-weight: bold;
+	position: absolute;
+	text-align: center;
+	top: 45%;
+	width: 100%;
+	z-index: 5;
+}
+
+.slide-img {
+	background: url(https://glatchdesign.com/wp-content/uploads/2016/02/mountain0209.jpg) no-repeat center;
+	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100vh;
+	height: 100vh;
 	width: 100%;
+}
+
+.slide-img::after {
+	background-color: rgba(0, 0, 0, 0.5);
+	bottom: 0;
+	content: '';
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.swiper-slide-active .slide-img,
+.swiper-slide-duplicate-active .slide-img,
+.swiper-slide-prev .slide-img {
+	-webkit-animation: zoomUp 12s linear 0s;
+	-webkit-animation-fill-mode: both;
+	animation: zoomUp 12s linear 0s;
+	animation-fill-mode: both;
 }
 
 .concept {
@@ -689,6 +720,34 @@ i {
 
 .shopinfo {
 	padding: 0 20em;
+}
+
+}
+
+@-webkit-keyframes zoomUp {
+
+0% {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+100% {
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
+}
+
+}
+
+@keyframes zoomUp {
+
+0% {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+
+100% {
+	-webkit-transform: scale(1.15);
+	transform: scale(1.15);
 }
 
 }
