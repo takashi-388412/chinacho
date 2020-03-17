@@ -104,6 +104,10 @@ body {
     }
   }
 }
+i {
+  float: left;
+  padding: 0 0 0 1em;
+}
 // ==================================
 // header
 // ==================================
@@ -264,7 +268,7 @@ body {
     padding: 0 10em;
   }
   @include pc {
-    padding: 0 15em;
+    padding: 0 20em;
   }
   &-title {
     float: left;
@@ -295,9 +299,6 @@ body {
     @include tb {
       margin: 0 auto;
     }
-    @include pc {
-      margin: 12% 0 0;
-    }
     p {
       line-height: 2em;
     }
@@ -313,15 +314,104 @@ body {
     padding: 0 10em;
   }
   @include pc {
-    padding: 0 15em;
+    padding: 0 20em;
   }
   &-title {
     float: right;
+  }
+  &-contents {
+    text-align: center;
+    .content {
+      display: block;
+      line-height: 2em;
+      &-date {
+        margin: 0 1em 0 0;
+      }
+    }
+  }
+}
+// ==================================
+// hairstyle
+// ==================================
+.hairstyle {
+  margin: 5em 0 0;
+  padding: 0 2em;
+  @include tb {
+    padding: 0 10em;
+  }
+  @include pc {
+    padding: 0 20em;
+  }
+  &-title {
+    float: left;
+  }
+  .imgs {
+    &-left {
+      width: 49%;
+      float: left;
+      @include pc {
+        width: 50%;
+      }
+    }
+    &-right {
+      width: 49%;
+      float: right;
+      @include pc {
+        width: 50%;
+      }
+    }
+  }
+  .img {
+    width: 100%;
+    @include pc {
+      width: 50%;
+      float: left;
+    }
+    img {
+      width: 98%;
+      height: auto;
+    }
+  }
+}
+// ==================================
+// pricelist
+// ==================================
+.pricelist {
+  margin: 5em 0 0;
+  padding: 0 2em;
+  @include tb {
+    padding: 0 10em;
+  }
+  @include pc {
+    padding: 0 20em;
+  }
+  &-title {
+    float: right;
+  }
+  &-img {
+    @include tb {
+      float: right;
+      width: 50%;
+    }
+    img {
+      width: 95%;
+      height: auto;
+      margin: 0 auto;
+      display: block;
+      @include tb {
+        width: 100%;
+      }
+    }
   }
 }
 #acMenu {
   margin: 1.5em 3em 0;
   text-align: center;
+  @include tb {
+    float: left;
+    width: 48%;
+    margin: 0;
+  }
   p {
     padding: 1em 0;
     border: solid 1px black;
@@ -363,94 +453,6 @@ body {
   }
 }
 // ==================================
-// hairstyle
-// ==================================
-.hairstyle {
-  margin: 5em 0 0;
-  padding: 0 2em;
-  @include tb {
-    padding: 0 10em;
-  }
-  @include pc {
-    padding: 0 15em;
-  }
-  &-title {
-    float: left;
-  }
-  .imgs {
-    &-left {
-      width: 49%;
-      float: left;
-      @include pc {
-        width: 40%;
-      }
-    }
-    &-right {
-      width: 49%;
-      float: right;
-      @include pc {
-        width: 40%;
-      }
-    }
-  }
-  .img {
-    width: 100%;
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-}
-// ==================================
-// pricelist
-// ==================================
-.pricelist {
-  margin: 5em 0 0;
-  padding: 0 2em;
-  @include tb {
-    padding: 0 10em;
-  }
-  @include pc {
-    padding: 0 15em;
-  }
-  &-title {
-    float: right;
-  }
-  &-img {
-    @include tb {
-      float: left;
-      width: 50%;
-    }
-    img {
-      width: 95%;
-      height: auto;
-      margin: 0 auto;
-      display: block;
-      @include tb {
-        width: 100%;
-      }
-    }
-  }
-  .menu {
-    margin: 1.5em 0 0;
-    text-align: center;
-    @include tb {
-      width: 50%;
-      float: right;
-      margin: 0;
-    }
-    @include pc {
-      margin: 12% 0 0;
-    }
-    p {
-      line-height: 2em;
-      span {
-        margin: 0 0 0 1em;
-      }
-    }
-  }
-}
-// ==================================
 // shopinfo
 // ==================================
 .shopinfo {
@@ -460,7 +462,7 @@ body {
     padding: 0 10em;
   }
   @include pc {
-    padding: 0 15em;
+    padding: 0 20em;
   }
   &-title {
     float: left;
