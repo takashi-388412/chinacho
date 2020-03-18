@@ -93,14 +93,22 @@ body {
   }
 }
 .btn {
-  margin: 2em 0 0;
+  margin: 2em 5em;
   text-align: center;
+  @include pc {
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
   .more {
-    display: inline-block;
+    padding: .5em 0;
+    color: white;
+    background-color: black;
+    display: block;
     text-decoration: none;
-    color: black;
     &:hover {
-      opacity: 0.7;
+      color: black;
+      background-color: white;
+      border-bottom: solid 2px gray;
     }
   }
 }
@@ -403,14 +411,14 @@ animation-fill-mode: both;
   }
   .imgs {
     &-left {
-      width: 49%;
+      width: 50%;
       float: left;
       @include pc {
         width: 50%;
       }
     }
     &-right {
-      width: 49%;
+      width: 50%;
       float: right;
       @include pc {
         width: 50%;
@@ -423,9 +431,14 @@ animation-fill-mode: both;
       width: 50%;
       float: left;
     }
-    img {
-      width: 98%;
-      height: auto;
+    a {
+      &:hover {
+        opacity: .7;
+      }
+      img {
+        width: 98%;
+        height: auto;
+      }
     }
   }
 }
@@ -596,6 +609,9 @@ animation-fill-mode: both;
     text-decoration: none;
     opacity: .5;
     &:hover {
+      color: #a40000;
+      background-color: white;
+      border-bottom: solid 2px gray;
       opacity: .7;
     }
     span {
