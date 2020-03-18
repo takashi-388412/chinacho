@@ -538,11 +538,22 @@ i {
 	float: left;
 }
 
+.shopinfo .wrapper {
+	height: 100%;
+}
+
 .shopinfo .wrapper .map {
-	background-color: #ddd;
-	color: #a40000;
-	height: 10em;
-	text-align: center;
+	padding-top: 60%;
+	position: relative;
+	width: 100%;
+}
+
+.shopinfo .wrapper .map iframe {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 
 .shopinfo .wrapper .info h3 {
@@ -648,21 +659,6 @@ i {
 	padding: 0 10em;
 }
 
-.shopinfo .wrapper {
-	position: relative;
-}
-
-.shopinfo .wrapper .map {
-	height: 25em;
-}
-
-.shopinfo .wrapper .info {
-	bottom: 2em;
-	left: 2em;
-	position: absolute;
-	z-index: 9999;
-}
-
 }
 
 @media screen and (min-width: 960px) {
@@ -726,6 +722,17 @@ i {
 
 .shopinfo {
 	padding: 0 20em;
+}
+
+.shopinfo .wrapper .map {
+	float: left;
+	width: 49%;
+}
+
+.shopinfo .wrapper .info {
+	float: right;
+	height: 49%;
+	width: 49%;
 }
 
 }

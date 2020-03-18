@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Takenn</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css">
-<!-- swiper.js -->
+  <!-- swiper.js -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <!-- style -->
   <!-- <link rel="stylesheet" href="./dist/css/style.min.css">  -->
@@ -152,12 +152,14 @@
       <div class="clearfix">
         <h2 class="shopinfo-title heading">SHOPINFO</h2>
       </div>
-      <div class="wrapper">
-        <div class="map">map</div>
+      <div class="wrapper clearfix">
+        <div class="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1619.8308768804227!2d139.81007885810996!3d35.70994042295434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7d1d4fb31f43f72a!2z5p2x5Lqs44K544Kr44Kk44OE44Oq44O8!5e0!3m2!1sja!2sjp!4v1584507543188!5m2!1sja!2sjp" width="500" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
         <div class="info">
-          <div class="clearfix">
+          <!-- <div class="clearfix"> -->
             <h3>INFOMATION</h3>
-          </div>
+          <!-- </div> -->
           <p class="intro"><span class="title">ADDRESS</span>渋谷区神宮前x-x-xx 2F</p>
           <p class="intro"><span class="title">OPEN</span>11:00～21:00（日・祝 11:00～19:00）</p>
           <p class="intro"><span class="title">CLOSE</span>毎週月曜日、第1・第3火曜日</p>
@@ -179,33 +181,12 @@
   </div>
 
 
-<!-- js -->
+<!-- jQ -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- swiper.js -->
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-<script>
-var mySwiper = new Swiper ('.swiper-container', {
-    // Optional parameters
-loop: true, // ループの指定
-effect: "fade", //フェードの指定
-autoplay: {
-delay: 4000, //４秒後に次のスライドへ
-disableOnInteraction: false //ユーザー側で操作してもスライドを止めない
-},
-speed: 2000, //２秒かけてフェードで切り替わる
-});
-</script>
-<script>
-jQuery(window).on('scroll',function($) {
-  if ( 500 < jQuery(this).scrollTop()) {
-    jQuery('#header').addClass('m_scroll');
-  } else {
-    jQuery('#header').removeClass('m_scroll');
-  }
-});
-</script>
-<!-- <script src="./src/bundle.js"></script> -->
 <!-- js -->
+<!-- <script src="./src/bundle.js"></script> -->
 <script src="./src/app.js"></script>
 </body>
 </html>

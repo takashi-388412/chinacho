@@ -524,25 +524,47 @@ animation-fill-mode: both;
     float: left;
   }
   .wrapper {
-    @include tb {
-      position: relative;
-    }
+    height: 100%;
+    // @include tb {
+    //   position: relative;
+    // }
     .map {
-      text-align: center;
-      color: #a40000;
-      height: 10em;
-      background-color: #ddd;
-      @include tb {
-        height: 25em;
+      position: relative;
+      width: 100%;
+      padding-top: 60%; //高さ ÷ 横 × 100
+      // text-align: center;
+      // color: #a40000;
+      // height: 10em;
+      // background-color: #ddd;
+      @include pc() {
+        // height: 25em;
+        float: left;
+        width: 49%;
+      }
+      & iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include pc() {
+
+        }
       }
     }
     .info {
-      @include tb {
-        position: absolute;
-        bottom: 2em;
-        left: 2em;
-        z-index: 9999;
+
+      @include pc() {
+        float: right;
+        width: 49%;
+        height: 49%;
       }
+      // @include tb {
+      //   position: absolute;
+      //   bottom: 2em;
+      //   left: 2em;
+      //   z-index: 9999;
+      // }
       h3 {
         margin: 1.5em 0 1em;
         font-size: 1.2em;
