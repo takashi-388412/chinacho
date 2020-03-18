@@ -602,7 +602,7 @@ i {
 }
 
 .reserve-btn {
-	bottom: 3em;
+	bottom: 10em;
 	display: none;
 	position: fixed;
 	right: 1em;
@@ -777,6 +777,10 @@ i {
 	height: 100%;
 	padding-top: 0;
 	width: 50%;
+}
+
+.reserve-btn {
+	bottom: 3em;
 }
 
 }

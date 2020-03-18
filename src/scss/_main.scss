@@ -600,10 +600,13 @@ animation-fill-mode: both;
 // ==================================
 .reserve-btn {
   position: fixed;
-  bottom: 3em;
   right: 1em;
+  bottom: 10em;
   // z-index: 0; 
   display: none;
+  @include pc() {
+    bottom: 3em;
+  }
   a {
     padding: .5em;
     text-align: center;
