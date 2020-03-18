@@ -537,22 +537,14 @@ animation-fill-mode: both;
     float: left;
   }
   .wrapper {
-    height: 100%;
-    // @include tb {
-    //   position: relative;
-    // }
-    .map {
+
+    .left-box {
       position: relative;
       width: 100%;
       padding-top: 60%; //高さ ÷ 横 × 100
-      // text-align: center;
-      // color: #a40000;
-      // height: 10em;
-      // background-color: #ddd;
       @include pc() {
-        // height: 25em;
         float: left;
-        width: 49%;
+        width: 50%;
       }
       & iframe {
         position: absolute;
@@ -560,27 +552,20 @@ animation-fill-mode: both;
         left: 0;
         width: 100%;
         height: 100%;
-        @include pc() {
-
-        }
       }
     }
-    .info {
-
+    .right-box {
+      padding-top: 1em;
+      padding-left: 2em;
       @include pc() {
         float: right;
-        width: 49%;
-        height: 49%;
+        width: 50%;
+        height: 100%;
       }
-      // @include tb {
-      //   position: absolute;
-      //   bottom: 2em;
-      //   left: 2em;
-      //   z-index: 9999;
-      // }
       h3 {
-        margin: 1.5em 0 1em;
+        margin-bottom: 1em;
         font-size: 1.2em;
+        width: 100%;
       }
       .intro {
         line-height: 2em;
@@ -597,7 +582,7 @@ animation-fill-mode: both;
 // ==================================
 .reserve-btn {
   position: fixed;
-  bottom: 7em;
+  bottom: 3em;
   right: 1em;
   z-index: 0; 
   a {
@@ -626,7 +611,7 @@ animation-fill-mode: both;
   color: white;
   background-color: black;
   margin: 3em 0 0;
-  padding: .3em 0;
+  padding: 1.2em 0;
   text-align: center;
   font-size: .8em;
 }

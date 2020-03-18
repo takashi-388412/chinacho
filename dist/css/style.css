@@ -546,17 +546,13 @@ i {
 	float: left;
 }
 
-.shopinfo .wrapper {
-	height: 100%;
-}
-
-.shopinfo .wrapper .map {
+.shopinfo .wrapper .left-box {
 	padding-top: 60%;
 	position: relative;
 	width: 100%;
 }
 
-.shopinfo .wrapper .map iframe {
+.shopinfo .wrapper .left-box iframe {
 	height: 100%;
 	left: 0;
 	position: absolute;
@@ -564,22 +560,28 @@ i {
 	width: 100%;
 }
 
-.shopinfo .wrapper .info h3 {
-	font-size: 1.2em;
-	margin: 1.5em 0 1em;
+.shopinfo .wrapper .right-box {
+	padding-left: 2em;
+	padding-top: 1em;
 }
 
-.shopinfo .wrapper .info .intro {
+.shopinfo .wrapper .right-box h3 {
+	font-size: 1.2em;
+	margin-bottom: 1em;
+	width: 100%;
+}
+
+.shopinfo .wrapper .right-box .intro {
 	font-size: .8em;
 	line-height: 2em;
 }
 
-.shopinfo .wrapper .info .intro .title {
+.shopinfo .wrapper .right-box .intro .title {
 	margin: 0 1em 0 0;
 }
 
 .reserve-btn {
-	bottom: 7em;
+	bottom: 3em;
 	position: fixed;
 	right: 1em;
 	z-index: 0;
@@ -611,7 +613,7 @@ i {
 	color: white;
 	font-size: .8em;
 	margin: 3em 0 0;
-	padding: .3em 0;
+	padding: 1.2em 0;
 	text-align: center;
 }
 
@@ -740,15 +742,15 @@ i {
 	padding: 0 20em;
 }
 
-.shopinfo .wrapper .map {
+.shopinfo .wrapper .left-box {
 	float: left;
-	width: 49%;
+	width: 50%;
 }
 
-.shopinfo .wrapper .info {
+.shopinfo .wrapper .right-box {
 	float: right;
-	height: 49%;
-	width: 49%;
+	height: 100%;
+	width: 50%;
 }
 
 }
