@@ -6,6 +6,17 @@ $(function () {
   var sp_menu = $('.hamberger-menu');
   var sp_menu_target = $('.nav');
 
+  //hamberger-menu click動作
+  sp_menu.on('click', function () {
+    $(this).toggleClass('active');
+    sp_menu_target.toggleClass('active');
+  });
+  // 【sp】リンク内クリック時の動作
+  $('.nav-item a').on('click', function () {
+    sp_menu.removeClass('active');
+    sp_menu_target.removeClass('active');
+  });
+
   // Top img-slider 
   var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
@@ -21,20 +32,25 @@ $(function () {
 jQuery(window).on('scroll',function($) {
   if ( 500 < jQuery(this).scrollTop()) {
     jQuery('#header').addClass('m_scroll');
+    jQuery('.reserve-btn').addClass('active2');
   } else {
     jQuery('#header').removeClass('m_scroll');
+    jQuery('.reserve-btn').removeClass('active2');
   }
 });
-  //hamberger-menu click動作
-  sp_menu.on('click', function () {
-    $(this).toggleClass('active');
-    sp_menu_target.toggleClass('active');
-  });
-  // 【sp】リンク内クリック時の動作
-  $('.nav-item a').on('click', function () {
-    sp_menu.removeClass('active');
-    sp_menu_target.removeClass('active');
-  });
+//section fadein
+$(function(){
+　$(window).scroll(function (){
+    $('.fade').each(function(){
+        var elemPos = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll > elemPos - windowHeight){
+            $(this).addClass('effect-scroll');
+        }
+    });
+　});
+});
   //acMenu
   jQuery( '.menu-1' ).on( 'click', function() {
     jQuery( '.price-1' ).slideToggle(300);

@@ -56,6 +56,9 @@ body {
 #wrapper {
 
 }
+.content-wrapper  {
+  padding-top: 5em;
+}
 //top-image の背景画像
 .none {
   display: none;
@@ -101,20 +104,44 @@ body {
   }
   .more {
     padding: .5em 0;
-    color: white;
-    background-color: black;
+    color: #fff;
+    background-color: #000;
     display: block;
     text-decoration: none;
     &:hover {
-      color: black;
-      background-color: white;
-      border-bottom: solid 2px gray;
+      color: #000;
+      background-color: #fff;
+      border-bottom: solid #808080;
     }
+  }
+}
+.button {
+  display: block;
+  background-color:#d3d3d3;
+  padding: 1.0em;
+  & .reserve{
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: #000;
+  }
+  &:hover {
+    opacity: 0.5;
   }
 }
 i {
   float: left;
   padding: 0 0 0 1em;
+}
+.fade {
+opacity : 0;
+transform : translate(0, 45px);
+// transition : all 300ms;
+transition : all .8s;
+}
+.fade.effect-scroll {
+opacity : 1;
+transform : translate(0, 0);
 }
 // ==================================
 // header
@@ -125,7 +152,7 @@ i {
   // height: 58px;
   padding: 10px;
   background: transparent;
-  z-index: 5; // 
+  z-index: 5; // 重なり一番上
 }
 #header.m_scroll {
   background: rgba(0, 0, 0, .65);
@@ -483,14 +510,14 @@ animation-fill-mode: both;
   }
   p {
     padding: 1em 0;
-    border: solid 1px black;
+    border: solid 1px #000;
   }
   li {
     list-style: none;
     line-height: 2em;
-    border-left: solid 1px black;
-    border-right: solid 1px black;
-    border-bottom: solid 1px black;
+    border-left: solid 1px #000;
+    border-right: solid 1px #000;
+    border-bottom: solid 1px #000;
   }
   .menu-1 {
     display: block;
@@ -559,6 +586,7 @@ animation-fill-mode: both;
       padding-left: 2em;
       @include pc() {
         float: right;
+        padding-top: 0;
         width: 50%;
         height: 100%;
       }
@@ -582,21 +610,25 @@ animation-fill-mode: both;
 // ==================================
 .reserve-btn {
   position: fixed;
-  bottom: 3em;
   right: 1em;
-  z-index: 0; 
+  bottom: 10em;
+  // z-index: 0; 
+  display: none;
+  @include pc() {
+    bottom: 3em;
+  }
   a {
     padding: .5em;
     text-align: center;
     display: block;
-    color: white;
-    background-color: black;
+    color: #fff;
+    background-color: #000;
     text-decoration: none;
     opacity: .5;
     &:hover {
       color: #a40000;
-      background-color: white;
-      border-bottom: solid 2px gray;
+      background-color: #fff;
+      border-bottom: solid 2px #808080;
       opacity: .7;
     }
     span {
@@ -604,12 +636,15 @@ animation-fill-mode: both;
     }
   }
 }
+.active2 {
+ display: block; 
+}
 // ==================================
 // footer
 // ==================================
 .footer {
-  color: white;
-  background-color: black;
+  color: #fff;
+  background-color: #000;
   margin: 3em 0 0;
   padding: 1.2em 0;
   text-align: center;
