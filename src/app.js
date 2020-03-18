@@ -6,6 +6,17 @@ $(function () {
   var sp_menu = $('.hamberger-menu');
   var sp_menu_target = $('.nav');
 
+  //hamberger-menu click動作
+  sp_menu.on('click', function () {
+    $(this).toggleClass('active');
+    sp_menu_target.toggleClass('active');
+  });
+  // 【sp】リンク内クリック時の動作
+  $('.nav-item a').on('click', function () {
+    sp_menu.removeClass('active');
+    sp_menu_target.removeClass('active');
+  });
+
   // Top img-slider 
   var mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
@@ -21,10 +32,10 @@ $(function () {
 jQuery(window).on('scroll',function($) {
   if ( 500 < jQuery(this).scrollTop()) {
     jQuery('#header').addClass('m_scroll');
-    jQuery('.reserve-btn').addClass('active');
+    jQuery('.reserve-btn').addClass('active2');
   } else {
     jQuery('#header').removeClass('m_scroll');
-    jQuery('.reserve-btn').removeClass('active');
+    jQuery('.reserve-btn').removeClass('active2');
   }
 });
 //section fadein
@@ -40,17 +51,6 @@ $(function(){
     });
 　});
 });
-
-  //hamberger-menu click動作
-  sp_menu.on('click', function () {
-    $(this).toggleClass('active');
-    sp_menu_target.toggleClass('active');
-  });
-  // 【sp】リンク内クリック時の動作
-  $('.nav-item a').on('click', function () {
-    sp_menu.removeClass('active');
-    sp_menu_target.removeClass('active');
-  });
   //acMenu
   jQuery( '.menu-1' ).on( 'click', function() {
     jQuery( '.price-1' ).slideToggle(300);

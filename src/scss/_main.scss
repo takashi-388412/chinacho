@@ -104,14 +104,14 @@ body {
   }
   .more {
     padding: .5em 0;
-    color: white;
-    background-color: black;
+    color: #fff;
+    background-color: #000;
     display: block;
     text-decoration: none;
     &:hover {
-      color: black;
-      background-color: white;
-      border-bottom: solid 2px gray;
+      color: #000;
+      background-color: #fff;
+      border-bottom: solid #808080;
     }
   }
 }
@@ -152,7 +152,7 @@ transform : translate(0, 0);
   // height: 58px;
   padding: 10px;
   background: transparent;
-  z-index: 5; // 
+  z-index: 5; // 重なり一番上
 }
 #header.m_scroll {
   background: rgba(0, 0, 0, .65);
@@ -510,14 +510,14 @@ animation-fill-mode: both;
   }
   p {
     padding: 1em 0;
-    border: solid 1px black;
+    border: solid 1px #000;
   }
   li {
     list-style: none;
     line-height: 2em;
-    border-left: solid 1px black;
-    border-right: solid 1px black;
-    border-bottom: solid 1px black;
+    border-left: solid 1px #000;
+    border-right: solid 1px #000;
+    border-bottom: solid 1px #000;
   }
   .menu-1 {
     display: block;
@@ -621,14 +621,14 @@ animation-fill-mode: both;
     padding: .5em;
     text-align: center;
     display: block;
-    color: white;
-    background-color: black;
+    color: #fff;
+    background-color: #000;
     text-decoration: none;
     opacity: .5;
     &:hover {
       color: #a40000;
-      background-color: white;
-      border-bottom: solid 2px gray;
+      background-color: #fff;
+      border-bottom: solid 2px #808080;
       opacity: .7;
     }
     span {
@@ -636,15 +636,15 @@ animation-fill-mode: both;
     }
   }
 }
-.active {
-  display: block;
+.active2 {
+ display: block; 
 }
 // ==================================
 // footer
 // ==================================
 .footer {
-  color: white;
-  background-color: black;
+  color: #fff;
+  background-color: #000;
   margin: 3em 0 0;
   padding: 1.2em 0;
   text-align: center;
