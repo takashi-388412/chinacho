@@ -27,6 +27,20 @@ jQuery(window).on('scroll',function($) {
     jQuery('.reserve-btn').removeClass('active');
   }
 });
+//section fadein
+$(function(){
+　$(window).scroll(function (){
+    $('.fade').each(function(){
+        var elemPos = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll > elemPos - windowHeight){
+            $(this).addClass('effect-scroll');
+        }
+    });
+　});
+});
+
   //hamberger-menu click動作
   sp_menu.on('click', function () {
     $(this).toggleClass('active');
