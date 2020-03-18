@@ -585,7 +585,8 @@ animation-fill-mode: both;
   position: fixed;
   bottom: 3em;
   right: 1em;
-  z-index: 0; 
+  // z-index: 0; 
+  display: none;
   a {
     padding: .5em;
     text-align: center;
@@ -604,6 +605,9 @@ animation-fill-mode: both;
       display: block;
     }
   }
+}
+.active {
+  display: block;
 }
 // ==================================
 // footer

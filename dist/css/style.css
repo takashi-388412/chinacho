@@ -582,9 +582,9 @@ i {
 
 .reserve-btn {
 	bottom: 3em;
+	display: none;
 	position: fixed;
 	right: 1em;
-	z-index: 0;
 }
 
 .reserve-btn a {
@@ -605,6 +605,10 @@ i {
 }
 
 .reserve-btn a span {
+	display: block;
+}
+
+.active {
 	display: block;
 }
 

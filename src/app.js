@@ -21,8 +21,10 @@ $(function () {
 jQuery(window).on('scroll',function($) {
   if ( 500 < jQuery(this).scrollTop()) {
     jQuery('#header').addClass('m_scroll');
+    jQuery('.reserve-btn').addClass('active');
   } else {
     jQuery('#header').removeClass('m_scroll');
+    jQuery('.reserve-btn').removeClass('active');
   }
 });
   //hamberger-menu click動作
