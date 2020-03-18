@@ -56,6 +56,9 @@ body {
 #wrapper {
 
 }
+.content-wrapper  {
+  padding-top: 5em;
+}
 //top-image の背景画像
 .none {
   display: none;
@@ -110,6 +113,20 @@ body {
       background-color: white;
       border-bottom: solid 2px gray;
     }
+  }
+}
+.button {
+  display: block;
+  background-color:#d3d3d3;
+  padding: 1.0em;
+  & .reserve{
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: #000;
+  }
+  &:hover {
+    opacity: 0.5;
   }
 }
 i {

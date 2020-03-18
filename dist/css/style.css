@@ -156,6 +156,10 @@ body {
 	box-sizing: border-box;
 }
 
+.content-wrapper {
+	padding-top: 5em;
+}
+
 .none {
 	display: none;
 }
@@ -207,6 +211,23 @@ body {
 	background-color: white;
 	border-bottom: solid 2px gray;
 	color: black;
+}
+
+.button {
+	background-color: #d3d3d3;
+	display: block;
+	padding: 1.0em;
+}
+
+.button .reserve {
+	color: #000;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+
+.button:hover {
+	opacity: 0.5;
 }
 
 i {
