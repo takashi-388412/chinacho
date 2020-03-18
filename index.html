@@ -15,25 +15,27 @@
 
 <div id="wrapper">
   <!-- header -->
-  <header class="header clearfix">
-  <!-- title -->
-  <h1 class="site-title"><a href="#">shinacho</a></h1>
-  <!-- global-nav -->
-    <nav class="nav">
-      <ul class="nav-list">
-        <li class="nav-item"><a href="#">TOP</a></li>
-        <li class="nav-item"><a href="#concept">CONCEPT</a></li>
-        <li class="nav-item"><a href="#news">NEWS</a></li>
-        <li class="nav-item"><a href="#hairstyle">STYLE</a></li>
-        <li class="nav-item"><a href="#pricelist">MENU</a></li>
-        <li class="nav-item"><a href="#shopinfo">SHOPINFO</a></li>
-      </ul>
-    </nav>
-  <!-- hamberger-menu -->
-  <div class="hamberger-menu">
-    <span></span>
-    <span></span>
-    <span></span>
+  <header id="header">
+   <div class="clearfix">
+    <!-- title -->
+    <h1 class="site-title"><a href="#">shinacho</a></h1>
+    <!-- global-nav -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#">TOP</a></li>
+          <li class="nav-item"><a href="#concept">CONCEPT</a></li>
+          <li class="nav-item"><a href="#news">NEWS</a></li>
+          <li class="nav-item"><a href="#hairstyle">STYLE</a></li>
+          <li class="nav-item"><a href="#pricelist">MENU</a></li>
+          <li class="nav-item"><a href="#shopinfo">SHOPINFO</a></li>
+        </ul>
+      </nav>
+    <!-- hamberger-menu -->
+    <div class="hamberger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
   </header>
 
@@ -191,6 +193,15 @@ delay: 4000, //４秒後に次のスライドへ
 disableOnInteraction: false //ユーザー側で操作してもスライドを止めない
 },
 speed: 2000, //２秒かけてフェードで切り替わる
+});
+</script>
+<script>
+jQuery(window).on('scroll',function($) {
+  if ( 500 < jQuery(this).scrollTop()) {
+    jQuery('#header').addClass('m_scroll');
+  } else {
+    jQuery('#header').removeClass('m_scroll');
+  }
 });
 </script>
 <!-- <script src="./src/bundle.js"></script> -->

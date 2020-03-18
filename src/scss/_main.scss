@@ -111,14 +111,17 @@ i {
 // ==================================
 // header
 // ==================================
-.header {
+#header {
   position: fixed;
   width: 100%;
   // height: 58px;
   padding: 10px;
-  // background: #000;
-  background: rgba(0, 0, 0, .85);
+  background: transparent;
   z-index: 5; // 
+}
+#header.m_scroll {
+  background: rgba(0, 0, 0, .65);
+  transition: .5s ease;
 }
 .site-title {
   float: left; //hamberger-menuとfloat
