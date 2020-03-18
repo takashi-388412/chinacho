@@ -119,14 +119,17 @@ i {
 // ==================================
 // header
 // ==================================
-.header {
+#header {
   position: fixed;
   width: 100%;
   // height: 58px;
   padding: 10px;
-  // background: #000;
-  background: rgba(0, 0, 0, .85);
+  background: transparent;
   z-index: 5; // 
+}
+#header.m_scroll {
+  background: rgba(0, 0, 0, .65);
+  transition: .5s ease;
 }
 .site-title {
   float: left; //hamberger-menuとfloat
@@ -534,28 +537,35 @@ animation-fill-mode: both;
     float: left;
   }
   .wrapper {
-    @include tb {
+
+    .left-box {
       position: relative;
-    }
-    .map {
-      text-align: center;
-      color: #a40000;
-      height: 10em;
-      background-color: #ddd;
-      @include tb {
-        height: 25em;
+      width: 100%;
+      padding-top: 60%; //高さ ÷ 横 × 100
+      @include pc() {
+        float: left;
+        width: 50%;
+      }
+      & iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
     }
-    .info {
-      @include tb {
-        position: absolute;
-        bottom: 2em;
-        left: 2em;
-        z-index: 9999;
+    .right-box {
+      padding-top: 1em;
+      padding-left: 2em;
+      @include pc() {
+        float: right;
+        width: 50%;
+        height: 100%;
       }
       h3 {
-        margin: 1.5em 0 1em;
+        margin-bottom: 1em;
         font-size: 1.2em;
+        width: 100%;
       }
       .intro {
         line-height: 2em;
@@ -572,7 +582,7 @@ animation-fill-mode: both;
 // ==================================
 .reserve-btn {
   position: fixed;
-  bottom: 7em;
+  bottom: 3em;
   right: 1em;
   z-index: 0; 
   a {
@@ -601,7 +611,7 @@ animation-fill-mode: both;
   color: white;
   background-color: black;
   margin: 3em 0 0;
-  padding: .3em 0;
+  padding: 1.2em 0;
   text-align: center;
   font-size: .8em;
 }
