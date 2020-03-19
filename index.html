@@ -13,6 +13,13 @@
 </head>
 <body>
 
+<!-- load image -->
+<section id="loading" class="loading">
+　<div class="loading__img">
+　　<img src="https://goo.gl/8XdHq9">
+　</div>
+</section>
+
 <div id="wrapper">
   <!-- header -->
   <header id="header">
@@ -188,6 +195,11 @@
 <!-- swiper.js -->
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 <!-- js -->
+<script>
+  jQuery(window).on('load', function() {
+  jQuery('#loader-bg').hide();
+});
+</script>
 <script src="./dist/js/bundle.js"></script>
 <!-- <script src="./src/app.js"></script> -->
 </body>

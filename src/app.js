@@ -1,4 +1,6 @@
 $(function () {
+  //reload topへ戻る
+  $('html,body').animate({ scrollTop: 0 }, '1');
 
   //hamberger_menu click時 動作 
   // var sp_menu = $('.js-toggle-sp-menu');
@@ -81,4 +83,15 @@ $(function(){
     $('.menu-4 i').toggleClass('fa-caret-right');
     $('.menu-4 i').toggleClass('fa-caret-down');
   });
+});
+
+$(function(){
+　//ローディングエリアを取得
+　var loading = $("#loading");
+　//ローディングエリアを隠す処理
+　var isHidden = function(){
+　　loading.fadeOut(1000); //1000ミリ秒かけてフェードアウト
+　};
+　//1000ミリ秒後にloadingFunc開始
+　setTimeout(isHidden,1500);
 });
