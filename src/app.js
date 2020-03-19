@@ -85,13 +85,24 @@ $(function(){
   });
 });
 
+//loading-pege
 $(function(){
-　//ローディングエリアを取得
+　//loading-areaを取得
 　var loading = $("#loading");
-　//ローディングエリアを隠す処理
+　//loading-area hide
 　var isHidden = function(){
 　　loading.fadeOut(1000); //1000ミリ秒かけてフェードアウト
 　};
 　//1000ミリ秒後にloadingFunc開始
 　setTimeout(isHidden,1500);
+});
+
+//fade in text
+$(function(){
+  $('.text').children().addBack().contents().each(function() {
+      $(this).replaceWith($(this).text().replace(/(\S)/g, '<span class="text-move">$&</span>'));
+  });
+   setTimeout(function(){
+      $(".text").addClass("active");
+  },100);
 });
