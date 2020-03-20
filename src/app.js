@@ -85,24 +85,37 @@ $(function(){
   });
 });
 
-//loading-pege
+//loading-page
 $(function(){
-　//loading-areaを取得
-　var loading = $("#loading");
-　//loading-area hide
-　var isHidden = function(){
+　var loading = $("#loading");　//loading-areaを取得
+　var isHidden = function(){　//loading-area hide
 　　loading.fadeOut(1000); //1000ミリ秒かけてフェードアウト
 　};
-　//1000ミリ秒後にloadingFunc開始
-　setTimeout(isHidden,1500);
+　setTimeout(isHidden,1500);　//1000ミリ秒後にloadingFunc開始
 });
-
-//fade in text
+//fadein text
 $(function(){
   $('.text').children().addBack().contents().each(function() {
       $(this).replaceWith($(this).text().replace(/(\S)/g, '<span class="text-move">$&</span>'));
   });
    setTimeout(function(){
       $(".text").addClass("active");
-  },100);
+  },2000);
+});
+
+// fadein left
+$(function(){
+  $('.box img').addClass('move');
+  $(window).scroll(function(){
+    $(".box").each(function(){
+      var imgPos = $(this).offset().top;    
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > imgPos - windowHeight + windowHeight/5){
+        $(this).find("img").removeClass('move');
+      } else {
+        $(this).find("img").addClass('move');
+      }
+    });
+  });
 });
