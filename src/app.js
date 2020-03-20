@@ -40,19 +40,19 @@ jQuery(window).on('scroll',function($) {
     jQuery('.reserve-btn').removeClass('active2');
   }
 });
-//section fadein
-$(function(){
-　$(window).scroll(function (){
-    $('.fade').each(function(){
-        var elemPos = $(this).offset().top;
-        var scroll = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        if (scroll > elemPos - windowHeight){
-            $(this).addClass('effect-scroll');
-        }
-    });
-　});
-});
+// //section fadein
+// $(function(){
+// 　$(window).scroll(function (){
+//     $('.fade').each(function(){
+//         var elemPos = $(this).offset().top;
+//         var scroll = $(window).scrollTop();
+//         var windowHeight = $(window).height();
+//         if (scroll > elemPos - windowHeight){
+//             $(this).addClass('effect-scroll');
+//         }
+//     });
+// 　});
+// });
   //acMenu
   jQuery( '.menu-1' ).on( 'click', function() {
     jQuery( '.price-1' ).slideToggle(300);
@@ -104,18 +104,34 @@ $(function(){
 });
 
 // fadein left
-$(function(){
-  $('.box img').addClass('move');
+$(function() {
+  // $('.box img').addClass('move');
   $(window).scroll(function(){
-    $(".box").each(function(){
+    $(".fade-left").each(function(){
       var imgPos = $(this).offset().top;    
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
       if (scroll > imgPos - windowHeight + windowHeight/5){
-        $(this).find("img").removeClass('move');
+        // $(this).find("img").removeClass('move');
+        $(this).addClass('move');
       } else {
-        $(this).find("img").addClass('move');
+        // $(this).find("img").addClass('move');
       }
     });
   });
+});
+//section fadein
+$(function() {
+　$(window).scroll(function (){
+    $('.fade-up').each(function(){
+        var elemPos = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+      if (scroll > elemPos - windowHeight + windowHeight/5){
+          $(this).addClass('effect-scroll');
+      } else {
+        $(this).removeClass('effect-scroll');
+      }
+    });
+　});
 });
