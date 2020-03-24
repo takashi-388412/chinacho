@@ -93,6 +93,7 @@ transform: translate(-50%,-50%);
   position: relative;
   display: inline-block;
   font-size: 1.6rem;
+  font-weight: bold;
   color: #000;
   z-index: -1; //重なり 1番下(z-index: 0;だとドロワーメニューで効かない)
 
@@ -148,34 +149,30 @@ i {
   float: left;
   padding: 0 0 0 1em;
 }
-//section毎 ふわっとfadein
-.fade-up {
-opacity : 0;
-transform : translate(0, 45px);
-// transition : all 300ms;
-transition : all .8s;
-}
-.fade-up.effect-scroll {
-opacity : 1;
-transform : translate(0, 0);
-}
-//fadein left(style)
-.fade-left {
-  -webkit-transform: translate(-10px, 0);
-  opacity: 0;
-
-  // -webkit-transition: all 1s;
-  // -webkit-transform: translate(0, 0);
-  // opacity: 1;
-}
-.fade-left.move {
-  -webkit-transition: all 1s;
-  -webkit-transform: translate(0, 0);
-  opacity: 1;
-
-  // -webkit-transform: translate(-10px, 0);
-  // opacity: 0;
-}
+// //section毎 ふわっとfadein
+// .fade-up {
+// opacity : 0;
+// transform : translate(0, 45px);
+// // transition : all 300ms;
+// transition : all .8s;
+// }
+// .fade-up.effect-scroll {
+// opacity : 1;
+// transform : translate(0, 0);
+// }
+// //fadein left(style)
+// .fade-left {
+//   transform: translate(-10px,0);
+//   -webkit-transform: translate(-10px, 0);
+//   opacity: 0;
+// }
+// .fade-left.move {
+//   transition: all 1.5s;
+//   transform: translate(0, 0);
+//   -webkit-transition: all 1s;
+//   -webkit-transform: translate(0, 0);
+//   opacity: 1;
+// }
 //top-text 1文字ずつfadein
 .text {
   text-align: center;
@@ -634,50 +631,97 @@ animation-fill-mode: both;
     padding: 0 10em;
   }
   @include pc {
-    padding: 0 20em;
+    // padding: 0 20em;
   }
   &-title {
     float: left;
   }
   .wrapper {
-
-    .left-box {
-      position: relative;
-      width: 100%;
-      padding-top: 60%; //高さ ÷ 横 × 100
-      @include pc() {
-        float: left;
-        width: 50%;
-      }
-      & iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
+    width: 100%;
+    margin: 0 auto;
+    // color: #fff;
+    @include pc() {
+      display: table;
     }
+
+.left-box {
+position: relative;
+padding-bottom: 56.25%;
+padding-top: 30px;
+height: 0;
+overflow: hidden;
+@include pc(){
+  width: 50%;
+  display: table-cell;
+}
+}
+ 
+.left-box iframe,
+.left-box object,
+.left-box embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+@include pc(){
+
+}
+}
+    // .left-box {
+    //   position: relative;
+    //   width: 100%;
+    //   height: 100%;
+    //   padding-top: 60%; //高さ ÷ 横 × 100
+    //   @include pc() {
+    //     display: table-cell;
+    //     width: 50%;
+    //   }
+    //   & iframe {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //   }
+    // }
     .right-box {
+      // background-color: #000;
       padding-top: 1em;
-      padding-left: 2em;
       @include pc() {
-        float: right;
+        display: table-cell;
+        padding-left: 0.5em;
         padding-top: 0;
         width: 50%;
         height: 100%;
       }
       h3 {
-        margin-bottom: 1em;
+        padding-bottom: 1em;
         font-size: 1.2em;
+        font-weight: bold;
+      }
+      table {
         width: 100%;
       }
-      .intro {
-        line-height: 2em;
-        font-size: .8em;
-        .title {
-          margin: 0 1em 0 0;
-        }
+      table th, table td {
+        padding: .5em;
       }
+      table th{
+        font-weight: bold;
+        width: 30%;
+      }
+      table td{
+        width: 70%;
+        line-height: 1.5em;
+      }
+      // .intro {
+      //   line-height: 2em;
+      //   font-size: .8em;
+      //   border-bottom: 1px solid #808080;
+      //   .title {
+      //     margin: 0 1em 0 0;
+      //   }
+      // }
     }
   }
 }

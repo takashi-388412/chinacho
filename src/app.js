@@ -1,6 +1,6 @@
 $(function () {
   //reload topへ戻る
-  $('html,body').animate({ scrollTop: 0 }, '1');
+  // $('html,body').animate({ scrollTop: 0 }, '1');
 
   //hamberger_menu click時 動作 
   // var sp_menu = $('.js-toggle-sp-menu');
@@ -115,7 +115,7 @@ $(function() {
         // $(this).find("img").removeClass('move');
         $(this).addClass('move');
       } else {
-        // $(this).find("img").addClass('move');
+        $(this).removeClass('move');
       }
     });
   });

@@ -193,6 +193,7 @@ body {
 	color: #000;
 	display: inline-block;
 	font-size: 1.6rem;
+	font-weight: bold;
 	margin: 0 0 2em;
 	position: relative;
 	z-index: -1;
@@ -252,33 +253,6 @@ body {
 i {
 	float: left;
 	padding: 0 0 0 1em;
-}
-
-.fade-up {
-	opacity: 0;
-	-webkit-transform: translate(0, 45px);
-	-ms-transform: translate(0, 45px);
-	transform: translate(0, 45px);
-	-webkit-transition: all .8s;
-	transition: all .8s;
-}
-
-.fade-up.effect-scroll {
-	opacity: 1;
-	-webkit-transform: translate(0, 0);
-	-ms-transform: translate(0, 0);
-	transform: translate(0, 0);
-}
-
-.fade-left {
-	-webkit-transform: translate(-10px, 0);
-	opacity: 0;
-}
-
-.fade-left.move {
-	-webkit-transition: all 1s;
-	-webkit-transform: translate(0, 0);
-	opacity: 1;
 }
 
 .text {
@@ -695,13 +669,22 @@ i {
 	float: left;
 }
 
-.shopinfo .wrapper .left-box {
-	padding-top: 60%;
-	position: relative;
+.shopinfo .wrapper {
+	margin: 0 auto;
 	width: 100%;
 }
 
-.shopinfo .wrapper .left-box iframe {
+.shopinfo .wrapper .left-box {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	position: relative;
+}
+
+.shopinfo .wrapper .left-box iframe,
+.shopinfo .wrapper .left-box object,
+.shopinfo .wrapper .left-box embed {
 	height: 100%;
 	left: 0;
 	position: absolute;
@@ -710,23 +693,32 @@ i {
 }
 
 .shopinfo .wrapper .right-box {
-	padding-left: 2em;
 	padding-top: 1em;
 }
 
 .shopinfo .wrapper .right-box h3 {
 	font-size: 1.2em;
-	margin-bottom: 1em;
+	font-weight: bold;
+	padding-bottom: 1em;
+}
+
+.shopinfo .wrapper .right-box table {
 	width: 100%;
 }
 
-.shopinfo .wrapper .right-box .intro {
-	font-size: .8em;
-	line-height: 2em;
+.shopinfo .wrapper .right-box table th,
+.shopinfo .wrapper .right-box table td {
+	padding: .5em;
 }
 
-.shopinfo .wrapper .right-box .intro .title {
-	margin: 0 1em 0 0;
+.shopinfo .wrapper .right-box table th {
+	font-weight: bold;
+	width: 30%;
+}
+
+.shopinfo .wrapper .right-box table td {
+	line-height: 1.5em;
+	width: 70%;
 }
 
 .reserve-btn {
@@ -891,18 +883,19 @@ i {
 	padding: 0 20em;
 }
 
-.shopinfo {
-	padding: 0 20em;
+.shopinfo .wrapper {
+	display: table;
 }
 
 .shopinfo .wrapper .left-box {
-	float: left;
+	display: table-cell;
 	width: 50%;
 }
 
 .shopinfo .wrapper .right-box {
-	float: right;
+	display: table-cell;
 	height: 100%;
+	padding-left: 0.5em;
 	padding-top: 0;
 	width: 50%;
 }
