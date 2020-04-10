@@ -84,6 +84,34 @@ top: 50%;
 left: 50%;
 transform: translate(-50%,-50%);
 }
+
+/*スクロールするコンテンツ*/
+.scrollbox {
+  height: 80vh;
+  color: #000;
+  background-color: #fff;
+}
+.parallax-bg {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+}
+/*各背景の画像*/
+.img-bg-01 {
+  background-image: url('../../src/img/Japan.jpg');
+// background-position: 50% 150px;
+}
+.img-bg-02 {
+  background-image: url('../../src/img/night_view.jpg');
+}
+.img-bg-03 {
+  background-image: url('../../src/img/uyuni.jpg');
+}
+.img-bg-04 {
+  background-image: url('../../src/img/Venezia.jpg');
+}
 // ==================================
 // parts(ボタン・h2:見出し,h3:小見出し
 // などの何回も使う部品)
@@ -361,67 +389,67 @@ i {
 // ==================================
 // hero
 // ==================================
-.slider-text {
-    position: absolute; //swiper-container外で、置くとnavの上に来てしまう。
-    z-index: 5;
-    font-size: 2.5em;
-    color: #fff;
-    width: 100%;
-    top: 45%;
-    text-align: center;
-    font-weight: bold;
-}
-.slide-img {
-  // background-repeat: no-repeat; 
-  // background-attachment: fixed; //fixedにするち上手く切り替わらない
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
-  background-position: center center; //背景画像は中央を軸に表示させる
-  height: 100vh;  //全画面表示
-  //mask
-	background: url(https://glatchdesign.com/wp-content/uploads/2016/02/mountain0209.jpg) no-repeat center;
-}
-.slide-img::after {
-  background-color: rgba(0,0,0,0.5); 
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: '';
-}
-@-webkit-keyframes zoomUp {
-0% {
--webkit-transform: scale(1);
-transform: scale(1);
-}
-100% {
--webkit-transform: scale(1.15);
-transform: scale(1.15);
-}
-}
+// .slider-text {
+//     position: absolute; //swiper-container外で、置くとnavの上に来てしまう。
+//     z-index: 5;
+//     font-size: 2.5em;
+//     color: #fff;
+//     width: 100%;
+//     top: 45%;
+//     text-align: center;
+//     font-weight: bold;
+// }
+// .slide-img {
+//   // background-repeat: no-repeat; 
+//   // background-attachment: fixed; //fixedにするち上手く切り替わらない
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   height: 100vh;
+//   width: 100%;
+//   background-position: center center; //背景画像は中央を軸に表示させる
+//   height: 100vh;  //全画面表示
+//   //mask
+// 	background: url(https://glatchdesign.com/wp-content/uploads/2016/02/mountain0209.jpg) no-repeat center;
+// }
+// .slide-img::after {
+//   background-color: rgba(0,0,0,0.5); 
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   content: '';
+// }
+// @-webkit-keyframes zoomUp {
+// 0% {
+// -webkit-transform: scale(1);
+// transform: scale(1);
+// }
+// 100% {
+// -webkit-transform: scale(1.15);
+// transform: scale(1.15);
+// }
+// }
 
-@keyframes zoomUp { //1.15倍させる指定
-0% {
--webkit-transform: scale(1);
-transform: scale(1);
-}
-100% {
--webkit-transform: scale(1.15);
-transform: scale(1.15);
-}
-}
+// @keyframes zoomUp { //1.15倍させる指定
+// 0% {
+// -webkit-transform: scale(1);
+// transform: scale(1);
+// }
+// 100% {
+// -webkit-transform: scale(1.15);
+// transform: scale(1.15);
+// }
+// }
 
-.swiper-slide-active .slide-img,
-.swiper-slide-duplicate-active .slide-img,
-.swiper-slide-prev .slide-img { //12秒かけて拡大させる
--webkit-animation: zoomUp 12s linear 0s;
-animation: zoomUp 12s linear 0s;
--webkit-animation-fill-mode: both;
-animation-fill-mode: both;
-}
+// .swiper-slide-active .slide-img,
+// .swiper-slide-duplicate-active .slide-img,
+// .swiper-slide-prev .slide-img { //12秒かけて拡大させる
+// -webkit-animation: zoomUp 12s linear 0s;
+// animation: zoomUp 12s linear 0s;
+// -webkit-animation-fill-mode: both;
+// animation-fill-mode: both;
+// }
 // ==================================
 // concept
 // ==================================

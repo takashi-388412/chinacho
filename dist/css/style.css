@@ -189,6 +189,40 @@ body {
 	transform: translate(-50%, -50%);
 }
 
+/*スクロールするコンテンツ*/
+
+.scrollbox {
+	background-color: #fff;
+	color: #000;
+	height: 80vh;
+}
+
+.parallax-bg {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 80vh;
+}
+
+/*各背景の画像*/
+
+.img-bg-01 {
+	background-image: url("../../src/img/Japan.jpg");
+}
+
+.img-bg-02 {
+	background-image: url("../../src/img/night_view.jpg");
+}
+
+.img-bg-03 {
+	background-image: url("../../src/img/uyuni.jpg");
+}
+
+.img-bg-04 {
+	background-image: url("../../src/img/Venezia.jpg");
+}
+
 .heading {
 	color: #000;
 	display: inline-block;
@@ -468,46 +502,6 @@ i {
 
 .nav-item a:hover {
 	opacity: 0.5;
-}
-
-.slider-text {
-	color: #fff;
-	font-size: 2.5em;
-	font-weight: bold;
-	position: absolute;
-	text-align: center;
-	top: 45%;
-	width: 100%;
-	z-index: 5;
-}
-
-.slide-img {
-	background: url(https://glatchdesign.com/wp-content/uploads/2016/02/mountain0209.jpg) no-repeat center;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100vh;
-	height: 100vh;
-	width: 100%;
-}
-
-.slide-img::after {
-	background-color: rgba(0, 0, 0, 0.5);
-	bottom: 0;
-	content: '';
-	left: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
-}
-
-.swiper-slide-active .slide-img,
-.swiper-slide-duplicate-active .slide-img,
-.swiper-slide-prev .slide-img {
-	-webkit-animation: zoomUp 12s linear 0s;
-	-webkit-animation-fill-mode: both;
-	animation: zoomUp 12s linear 0s;
-	animation-fill-mode: both;
 }
 
 .concept {
@@ -902,34 +896,6 @@ i {
 
 .reserve-btn {
 	bottom: 3em;
-}
-
-}
-
-@-webkit-keyframes zoomUp {
-
-0% {
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-
-100% {
-	-webkit-transform: scale(1.15);
-	transform: scale(1.15);
-}
-
-}
-
-@keyframes zoomUp {
-
-0% {
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-
-100% {
-	-webkit-transform: scale(1.15);
-	transform: scale(1.15);
 }
 
 }
