@@ -170,10 +170,64 @@ body {
 	display: block;
 }
 
+.loading {
+	background: #fff;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 100;
+}
+
+.loading__img {
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+/*スクロールするコンテンツ*/
+
+.scrollbox {
+	background-color: #fff;
+	color: #000;
+	height: 80vh;
+}
+
+.parallax-bg {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 80vh;
+}
+
+/*各背景の画像*/
+
+.img-bg-01 {
+	background-image: url("../../src/img/Japan.jpg");
+}
+
+.img-bg-02 {
+	background-image: url("../../src/img/night_view.jpg");
+}
+
+.img-bg-03 {
+	background-image: url("../../src/img/uyuni.jpg");
+}
+
+.img-bg-04 {
+	background-image: url("../../src/img/Venezia.jpg");
+}
+
 .heading {
 	color: #000;
 	display: inline-block;
 	font-size: 1.6rem;
+	font-weight: bold;
 	margin: 0 0 2em;
 	position: relative;
 	z-index: -1;
@@ -235,20 +289,86 @@ i {
 	padding: 0 0 0 1em;
 }
 
-.fade {
+.text {
 	opacity: 0;
-	-webkit-transform: translate(0, 45px);
-	-ms-transform: translate(0, 45px);
-	transform: translate(0, 45px);
-	-webkit-transition: all .8s;
-	transition: all .8s;
+	text-align: center;
 }
 
-.fade.effect-scroll {
+.text-move {
+	display: inline-block;
+	font-size: 50px;
+	letter-spacing: 0.02em;
+	opacity: 0;
+	-webkit-transform: scale(1.25) translate(8px, 4px);
+	-ms-transform: scale(1.25) translate(8px, 4px);
+	transform: scale(1.25) translate(8px, 4px);
+}
+
+.text-move:nth-child(1) {
+	-webkit-transition: opacity 1.2s ease 0.1s, -webkit-transform 1.2s ease 0.2s;
+	transition: opacity 1.2s ease 0.1s, -webkit-transform 1.2s ease 0.2s;
+	transition: opacity 1.2s ease 0.1s, transform 1.2s ease 0.2s;
+	transition: opacity 1.2s ease 0.1s, transform 1.2s ease 0.2s, -webkit-transform 1.2s ease 0.2s;
+}
+
+.text-move:nth-child(2) {
+	-webkit-transition: opacity 1.2s ease 0.2s, -webkit-transform 1.2s ease 0.25s;
+	transition: opacity 1.2s ease 0.2s, -webkit-transform 1.2s ease 0.25s;
+	transition: opacity 1.2s ease 0.2s, transform 1.2s ease 0.25s;
+	transition: opacity 1.2s ease 0.2s, transform 1.2s ease 0.25s, -webkit-transform 1.2s ease 0.25s;
+}
+
+.text-move:nth-child(3) {
+	-webkit-transition: opacity 1.2s ease 0.25s, -webkit-transform 1.2s ease 0.3s;
+	transition: opacity 1.2s ease 0.25s, -webkit-transform 1.2s ease 0.3s;
+	transition: opacity 1.2s ease 0.25s, transform 1.2s ease 0.3s;
+	transition: opacity 1.2s ease 0.25s, transform 1.2s ease 0.3s, -webkit-transform 1.2s ease 0.3s;
+}
+
+.text-move:nth-child(4) {
+	-webkit-transition: opacity 1.2s ease 0.3s, -webkit-transform 1.2s ease 0.35s;
+	transition: opacity 1.2s ease 0.3s, -webkit-transform 1.2s ease 0.35s;
+	transition: opacity 1.2s ease 0.3s, transform 1.2s ease 0.35s;
+	transition: opacity 1.2s ease 0.3s, transform 1.2s ease 0.35s, -webkit-transform 1.2s ease 0.35s;
+}
+
+.text-move:nth-child(5) {
+	-webkit-transition: opacity 1.2s ease 0.35s, -webkit-transform 1.2s ease 0.4s;
+	transition: opacity 1.2s ease 0.35s, -webkit-transform 1.2s ease 0.4s;
+	transition: opacity 1.2s ease 0.35s, transform 1.2s ease 0.4s;
+	transition: opacity 1.2s ease 0.35s, transform 1.2s ease 0.4s, -webkit-transform 1.2s ease 0.4s;
+}
+
+.text-move:nth-child(6) {
+	-webkit-transition: opacity 1.2s ease 0.4s, -webkit-transform 1.2s ease 0.45s;
+	transition: opacity 1.2s ease 0.4s, -webkit-transform 1.2s ease 0.45s;
+	transition: opacity 1.2s ease 0.4s, transform 1.2s ease 0.45s;
+	transition: opacity 1.2s ease 0.4s, transform 1.2s ease 0.45s, -webkit-transform 1.2s ease 0.45s;
+}
+
+.text-move:nth-child(7) {
+	-webkit-transition: opacity 1.2s ease 0.45s, -webkit-transform 1.2s ease 0.5s;
+	transition: opacity 1.2s ease 0.45s, -webkit-transform 1.2s ease 0.5s;
+	transition: opacity 1.2s ease 0.45s, transform 1.2s ease 0.5s;
+	transition: opacity 1.2s ease 0.45s, transform 1.2s ease 0.5s, -webkit-transform 1.2s ease 0.5s;
+}
+
+.text-move:nth-child(8) {
+	-webkit-transition: opacity 1.2s ease 0.5s, -webkit-transform 1.2s ease 0.55s;
+	transition: opacity 1.2s ease 0.5s, -webkit-transform 1.2s ease 0.55s;
+	transition: opacity 1.2s ease 0.5s, transform 1.2s ease 0.55s;
+	transition: opacity 1.2s ease 0.5s, transform 1.2s ease 0.55s, -webkit-transform 1.2s ease 0.55s;
+}
+
+.text.active {
 	opacity: 1;
-	-webkit-transform: translate(0, 0);
-	-ms-transform: translate(0, 0);
-	transform: translate(0, 0);
+}
+
+.text.active .text-move {
+	opacity: 1;
+	-webkit-transform: scale(1) translate(0);
+	-ms-transform: scale(1) translate(0);
+	transform: scale(1) translate(0);
 }
 
 #header {
@@ -382,46 +502,6 @@ i {
 
 .nav-item a:hover {
 	opacity: 0.5;
-}
-
-.slide-text {
-	color: #fff;
-	font-size: 2.5em;
-	font-weight: bold;
-	position: absolute;
-	text-align: center;
-	top: 45%;
-	width: 100%;
-	z-index: 5;
-}
-
-.slide-img {
-	background: url(https://glatchdesign.com/wp-content/uploads/2016/02/mountain0209.jpg) no-repeat center;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100vh;
-	height: 100vh;
-	width: 100%;
-}
-
-.slide-img::after {
-	background-color: rgba(0, 0, 0, 0.5);
-	bottom: 0;
-	content: '';
-	left: 0;
-	position: absolute;
-	right: 0;
-	top: 0;
-}
-
-.swiper-slide-active .slide-img,
-.swiper-slide-duplicate-active .slide-img,
-.swiper-slide-prev .slide-img {
-	-webkit-animation: zoomUp 12s linear 0s;
-	-webkit-animation-fill-mode: both;
-	animation: zoomUp 12s linear 0s;
-	animation-fill-mode: both;
 }
 
 .concept {
@@ -583,13 +663,22 @@ i {
 	float: left;
 }
 
-.shopinfo .wrapper .left-box {
-	padding-top: 60%;
-	position: relative;
+.shopinfo .wrapper {
+	margin: 0 auto;
 	width: 100%;
 }
 
-.shopinfo .wrapper .left-box iframe {
+.shopinfo .wrapper .left-box {
+	height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	position: relative;
+}
+
+.shopinfo .wrapper .left-box iframe,
+.shopinfo .wrapper .left-box object,
+.shopinfo .wrapper .left-box embed {
 	height: 100%;
 	left: 0;
 	position: absolute;
@@ -598,23 +687,32 @@ i {
 }
 
 .shopinfo .wrapper .right-box {
-	padding-left: 2em;
 	padding-top: 1em;
 }
 
 .shopinfo .wrapper .right-box h3 {
 	font-size: 1.2em;
-	margin-bottom: 1em;
+	font-weight: bold;
+	padding-bottom: 1em;
+}
+
+.shopinfo .wrapper .right-box table {
 	width: 100%;
 }
 
-.shopinfo .wrapper .right-box .intro {
-	font-size: .8em;
-	line-height: 2em;
+.shopinfo .wrapper .right-box table th,
+.shopinfo .wrapper .right-box table td {
+	padding: .5em;
 }
 
-.shopinfo .wrapper .right-box .intro .title {
-	margin: 0 1em 0 0;
+.shopinfo .wrapper .right-box table th {
+	font-weight: bold;
+	width: 30%;
+}
+
+.shopinfo .wrapper .right-box table td {
+	line-height: 1.5em;
+	width: 70%;
 }
 
 .reserve-btn {
@@ -779,52 +877,25 @@ i {
 	padding: 0 20em;
 }
 
-.shopinfo {
-	padding: 0 20em;
+.shopinfo .wrapper {
+	display: table;
 }
 
 .shopinfo .wrapper .left-box {
-	float: left;
+	display: table-cell;
 	width: 50%;
 }
 
 .shopinfo .wrapper .right-box {
-	float: right;
+	display: table-cell;
 	height: 100%;
+	padding-left: 0.5em;
 	padding-top: 0;
 	width: 50%;
 }
 
 .reserve-btn {
 	bottom: 3em;
-}
-
-}
-
-@-webkit-keyframes zoomUp {
-
-0% {
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-
-100% {
-	-webkit-transform: scale(1.15);
-	transform: scale(1.15);
-}
-
-}
-
-@keyframes zoomUp {
-
-0% {
-	-webkit-transform: scale(1);
-	transform: scale(1);
-}
-
-100% {
-	-webkit-transform: scale(1.15);
-	transform: scale(1.15);
 }
 
 }

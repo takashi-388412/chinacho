@@ -1,4 +1,6 @@
 $(function () {
+  //reload topへ戻る
+  // $('html,body').animate({ scrollTop: 0 }, '1');
 
   //hamberger_menu click時 動作 
   // var sp_menu = $('.js-toggle-sp-menu');
@@ -38,19 +40,19 @@ jQuery(window).on('scroll',function($) {
     jQuery('.reserve-btn').removeClass('active2');
   }
 });
-//section fadein
-$(function(){
-　$(window).scroll(function (){
-    $('.fade').each(function(){
-        var elemPos = $(this).offset().top;
-        var scroll = $(window).scrollTop();
-        var windowHeight = $(window).height();
-        if (scroll > elemPos - windowHeight){
-            $(this).addClass('effect-scroll');
-        }
-    });
-　});
-});
+// //section fadein
+// $(function(){
+// 　$(window).scroll(function (){
+//     $('.fade').each(function(){
+//         var elemPos = $(this).offset().top;
+//         var scroll = $(window).scrollTop();
+//         var windowHeight = $(window).height();
+//         if (scroll > elemPos - windowHeight){
+//             $(this).addClass('effect-scroll');
+//         }
+//     });
+// 　});
+// });
   //acMenu
   jQuery( '.menu-1' ).on( 'click', function() {
     jQuery( '.price-1' ).slideToggle(300);
@@ -81,4 +83,55 @@ $(function(){
     $('.menu-4 i').toggleClass('fa-caret-right');
     $('.menu-4 i').toggleClass('fa-caret-down');
   });
+});
+
+//loading-page
+$(function(){
+　var loading = $("#loading");　//loading-areaを取得
+　var isHidden = function(){　//loading-area hide
+　　loading.fadeOut(1000); //1000ミリ秒かけてフェードアウト
+　};
+　setTimeout(isHidden,1500);　//1000ミリ秒後にloadingFunc開始
+});
+//fadein text
+$(function(){
+  $('.text').children().addBack().contents().each(function() {
+      $(this).replaceWith($(this).text().replace(/(\S)/g, '<span class="text-move">$&</span>'));
+  });
+   setTimeout(function(){
+      $(".text").addClass("active");
+  },2000);
+});
+
+// fadein left
+$(function() {
+  // $('.box img').addClass('move');
+  $(window).scroll(function(){
+    $(".fade-left").each(function(){
+      var imgPos = $(this).offset().top;    
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll > imgPos - windowHeight + windowHeight/5){
+        // $(this).find("img").removeClass('move');
+        $(this).addClass('move');
+      } else {
+        $(this).removeClass('move');
+      }
+    });
+  });
+});
+//section fadein
+$(function() {
+　$(window).scroll(function (){
+    $('.fade-up').each(function(){
+        var elemPos = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+      if (scroll > elemPos - windowHeight + windowHeight/5){
+          $(this).addClass('effect-scroll');
+      } else {
+        $(this).removeClass('effect-scroll');
+      }
+    });
+　});
 });
