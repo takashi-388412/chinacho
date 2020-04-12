@@ -56,9 +56,6 @@ body {
 #wrapper {
 
 }
-.content-wrapper  {
-  padding-top: 5em;
-}
 //top-image の背景画像
 .none {
   display: none;
@@ -70,28 +67,32 @@ body {
  }
  //page loading
 .loading {
-position: fixed;
-z-index: 100;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-background: #fff;
+  // position: fixed;
+  // z-index: 100;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+  // background: #fff;
   }
 .loading__img {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%,-50%);
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%,-50%);
 }
-
 /*スクロールするコンテンツ*/
 .scrollbox {
-  // height: 80vh;
-  // height: 100vh;
   height: 100%;
   color: #000;
   background-color: #fff;
+  padding: 2em;
+  @include tb() {
+  padding: 5em;
+  }
+  @include pc() {
+  padding: 8em 10em;
+  }
 }
 .parallax-bg {
   background-attachment: fixed;
@@ -119,57 +120,62 @@ transform: translate(-50%,-50%);
 // などの何回も使う部品)
 // ==================================
 .heading {
-  margin: 0 0 2em;
+  margin: 0 0 1em;
   position: relative;
   display: inline-block;
-  font-size: 1.6rem;
+  font-size: 1.8em;
   font-weight: bold;
   color: #000;
   z-index: 30; //重なり 1番下(z-index: 0;だとドロワーメニューで効かない)
+  @include pc () {
+    margin: 0 0 2em;
+    font-size: 2.4em;
+  }
 
-  &::before {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    border-bottom: 1px solid #000;
-  }
-  &::after {
-   @extend ::before;
-    bottom: -5px;
-  }
+//   &::before {
+//     content: '';
+//     display: inline-block;
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     width: 100%;
+//     border-bottom: 1px solid #000;
+//   }
+//   &::after {
+//    @extend ::before;
+//     bottom: -5px;
+//   }
 }
 .btn {
-  margin: 2em 5em;
+  margin: 2em auto 1em;
   text-align: center;
   @include pc {
-    margin-left: 20vw;
-    margin-right: 20vw;
+    width: 300px;
   }
   .more {
-    padding: .5em 0;
+    padding: .8em 0;
     color: #fff;
     background-color: #000;
     display: block;
     text-decoration: none;
+    @include pc() {
+      padding: 1.5em 0;
+    }
     &:hover {
       color: #000;
-      background-color: #fff;
-      border-bottom: solid #808080;
+      background-color: #f8f8f8;
     }
   }
 }
 .button {
   display: block;
-  background-color:#d3d3d3;
+  background-color:#000;
   padding: 1.0em;
   & .reserve{
     text-align: center;
     display: block;
     text-decoration: none;
-    color: #000;
+    color: #fff;
   }
   &:hover {
     opacity: 0.5;
@@ -337,7 +343,7 @@ i {
   right: -100%; //hambergermenuをクリックするまで、画面外(右)へ隠しておく
   // right: 0%;
   background: rgba(0, 0, 0, .85);
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   // margin-top: 58px;
   transition: .5s;
@@ -456,14 +462,13 @@ i {
 // concept
 // ==================================
 .concept {
-  margin: 2em 0 0;
-  padding: 0 2em;
-  @include tb {
-    padding: 0 10em;
-  }
-  @include pc {
-    padding: 0 20em;
-  }
+  // padding: 0 2em;
+  // @include tb {
+  //   padding: 0 10em;
+  // }
+  // @include pc {
+  //   padding: 0 20em;
+  // }
   &-title {
     text-align: center;
   }
@@ -502,14 +507,13 @@ i {
 // news
 // ==================================
 .news {
-  margin: 5em 0 0;
-  padding: 0 2em;
-  @include tb {
-    padding: 0 10em;
-  }
-  @include pc {
-    padding: 0 20em;
-  }
+  // padding: 0 2em;
+  // @include tb {
+  //   padding: 0 10em;
+  // }
+  // @include pc {
+  //   padding: 0 20em;
+  // }
   &-title {
     text-align: center;
   }
@@ -528,14 +532,13 @@ i {
 // hairstyle
 // ==================================
 .hairstyle {
-  margin: 5em 0 0;
-  padding: 0 2em;
-  @include tb {
-    padding: 0 10em;
-  }
-  @include pc {
-    padding: 0 20em;
-  }
+  // padding: 0 2em;
+  // @include tb {
+  //   padding: 0 10em;
+  // }
+  // @include pc {
+  //   padding: 0 20em;
+  // }
   &-title {
     text-align: center;
   }
@@ -576,14 +579,13 @@ i {
 // pricelist
 // ==================================
 .pricelist {
-  margin: 5em 0 0;
-  padding: 0 2em;
-  @include tb {
-    padding: 0 10em;
-  }
-  @include pc {
-    padding: 0 20em;
-  }
+  // padding: 0 2em;
+  // @include tb {
+  //   padding: 0 10em;
+  // }
+  // @include pc {
+  //   padding: 0 20em;
+  // }
   &-title {
     text-align: center;
   }
@@ -655,14 +657,13 @@ i {
 // shopinfo
 // ==================================
 .shopinfo {
-  margin: 5em 0 0;
-  padding: 0 2em;
-  @include tb {
-    padding: 0 10em;
-  }
-  @include pc {
-    padding: 0 20em;
-  }
+  // padding: 0 2em;
+  // @include tb {
+  //   padding: 0 10em;
+  // }
+  // @include pc {
+  //   padding: 0 20em;
+  // }
   &-title {
     text-align: center;
   }
@@ -698,8 +699,7 @@ i {
       }
     }
     .right-box {
-      padding-top: 1em;
-      background: #f0f8ff;
+      background: #f8f8ff	;
       @include pc() {
         width: 50%;
         // color: #fff;
@@ -724,76 +724,7 @@ i {
         width: 70%;
         line-height: 1.5em;
       }
-      // .intro {
-      //   line-height: 2em;
-      //   font-size: .8em;
-      //   border-bottom: 1px solid #808080;
-      //   .title {
-      //     margin: 0 1em 0 0;
-      //   }
-      // }
     }
-
-    // .left-box {
-    //   width: 100%;
-    //   @include pc() {
-    //   width: 50%;
-    //   position: relative;
-    //   padding-bottom: 10%;
-    //   overflow: hidden;
-    //   }
-    //   & iframe {
-    //     max-height: 350px;
-    //     max-width: 100%;
-    //     @include pc() {
-    //     position: absolute;
-    //     top: 0;
-    //     right: 0;
-    //     width: 100%;
-    //     // height: 100%;
-    //     max-width: 90%;
-    //     // max-height: 50%;
-    //     }
-    //   }
-    // }
-    // .right-box {
-    //   // background-color: #000;
-    //   padding-top: 1em;
-    //   @include pc() {
-    //     // display: table-cell;
-    //     padding-left: 0.5em;
-    //     padding-top: 0;
-    //     width: 50%;
-    //     background-color: red;
-    //   }
-    //   h3 {
-    //     padding-bottom: 1em;
-    //     font-size: 1.2em;
-    //     font-weight: bold;
-    //   }
-    //   table {
-    //     width: 100%;
-    //   }
-    //   table th, table td {
-    //     padding: .5em;
-    //   }
-    //   table th{
-    //     font-weight: bold;
-    //     width: 30%;
-    //   }
-    //   table td{
-    //     width: 70%;
-    //     line-height: 1.5em;
-    //   }
-    //   // .intro {
-    //   //   line-height: 2em;
-    //   //   font-size: .8em;
-    //   //   border-bottom: 1px solid #808080;
-    //   //   .title {
-    //   //     margin: 0 1em 0 0;
-    //   //   }
-    //   // }
-    // }
   }
 }
 // ==================================
@@ -836,7 +767,6 @@ i {
 .footer {
   color: #fff;
   background-color: #000;
-  margin: 3em 0 0;
   padding: 1.2em 0;
   text-align: center;
   font-size: .8em;
