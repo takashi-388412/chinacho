@@ -208,19 +208,19 @@ body {
 /*各背景の画像*/
 
 .img-bg-01 {
-	background-image: url("../../src/img/Japan.jpg");
+	background-image: url("../../src/img/shop_exterior.jpg");
 }
 
 .img-bg-02 {
-	background-image: url("../../src/img/night_view.jpg");
+	background-image: url("../../src/img/shop_inside.jpg");
 }
 
 .img-bg-03 {
-	background-image: url("../../src/img/uyuni.jpg");
+	background-image: url("../../src/img/shop_card.jpg");
 }
 
 .img-bg-04 {
-	background-image: url("../../src/img/Venezia.jpg");
+	background-image: url("../../src/img/shop_exterior.jpg");
 }
 
 .heading {
