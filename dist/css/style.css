@@ -186,19 +186,23 @@ body {
 /*各背景の画像*/
 
 .img-bg-01 {
-	background-image: url("../../src/img/shop_exterior.jpg");
+	background-image: url("../../src/img/bg1.jpg");
 }
 
 .img-bg-02 {
-	background-image: url("../../src/img/shop_inside.jpg");
+	background-image: url("../../src/img/bg2.jpg");
 }
 
 .img-bg-03 {
-	background-image: url("../../src/img/shop_card.jpg");
+	background-image: url("../../src/img/bg3.jpg");
 }
 
 .img-bg-04 {
-	background-image: url("../../src/img/shop_exterior.jpg");
+	background-image: url("../../src/img/bg4.jpg");
+}
+
+.img-bg-05 {
+	background-image: url("../../src/img/bg5.jpg");
 }
 
 .heading {
@@ -409,6 +413,7 @@ i {
 }
 
 .nav-item {
+	font-weight: bold;
 	padding: 20px;
 	text-align: center;
 }
@@ -687,7 +692,7 @@ i {
 }
 
 .heading {
-	font-size: 2.4em;
+	font-size: 2.0em;
 }
 
 .btn {

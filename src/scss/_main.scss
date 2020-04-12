@@ -104,17 +104,24 @@ body {
 }
 /*各背景の画像*/
 .img-bg-01 {
-  background-image: url('../../src/img/shop_exterior.jpg');
-// background-position: 50% 150px;
+  // background-image: url('../../src/img/shop_exterior.jpg');
+  background-image: url('../../src/img/bg1.jpg');
 }
 .img-bg-02 {
-  background-image: url('../../src/img/shop_inside.jpg');
+  // background-image: url('../../src/img/shop_inside.jpg');
+  background-image: url('../../src/img/bg2.jpg');
 }
 .img-bg-03 {
-  background-image: url('../../src/img/shop_card.jpg');
+  // background-image: url('../../src/img/shop_card.jpg');
+  background-image: url('../../src/img/bg3.jpg');
 }
 .img-bg-04 {
-  background-image: url('../../src/img/shop_exterior.jpg');
+  // background-image: url('../../src/img/shop_exterior.jpg');
+  background-image: url('../../src/img/bg4.jpg');
+}
+.img-bg-05 {
+  // background-image: url('../../src/img/shop_exterior.jpg');
+  background-image: url('../../src/img/bg5.jpg');
 }
 // ==================================
 // parts(ボタン・h2:見出し,h3:小見出し
@@ -129,7 +136,7 @@ body {
   color: #000;
   z-index: 0; //重なり 1番下(z-index: 0;だとドロワーメニューで効かない)
   @include pc () {
-    font-size: 2.4em;
+    font-size: 2.0em;
   }
 
 //   &::before {
@@ -384,11 +391,11 @@ transform : translate(0, 0);
   top: 0;
   // right: 0%;
   right: -100%; //hambergermenuをクリックするまで、画面外(右)へ隠しておく
-  // background: rgba(0, 0, 0, .85);
   background-color: rgba(166, 136, 118, 0.9);
+  // background: rgba(0, 0, 0, .85);
+  // margin-top: 58px;
   width: 100vw;
   height: 100vh;
-  // margin-top: 58px;
   transition: .5s;
   //navgation_menu用
   display: table;
@@ -417,6 +424,7 @@ transform : translate(0, 0);
 .nav-item {
   text-align: center; 
   padding: 20px;
+  font-weight: bold;
   @include pc () {//数が多いとcolumn落ちするので気を付ける！！
     display: inline-block;
     padding: 10px;
