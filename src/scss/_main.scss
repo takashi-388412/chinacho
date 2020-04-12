@@ -128,7 +128,7 @@ body {
   color: #000;
   z-index: 30; //重なり 1番下(z-index: 0;だとドロワーメニューで効かない)
   @include pc () {
-    margin: 0 0 2em;
+    margin: 0 0 1.5em;
     font-size: 2.4em;
   }
 
@@ -522,6 +522,7 @@ i {
     .content {
       display: block;
       line-height: 2em;
+      border: 1px solid #000;
       &-date {
         margin: 0 1em 0 0;
       }

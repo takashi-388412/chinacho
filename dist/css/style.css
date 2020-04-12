@@ -413,6 +413,7 @@ i {
 }
 
 .news-contents .content {
+	border: 1px solid #000;
 	display: block;
 	line-height: 2em;
 }
@@ -646,7 +647,7 @@ i {
 
 .heading {
 	font-size: 2.4em;
-	margin: 0 0 2em;
+	margin: 0 0 1.5em;
 }
 
 .btn {
