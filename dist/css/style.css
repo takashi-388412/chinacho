@@ -428,7 +428,7 @@ i {
 }
 
 .concept-title {
-	float: left;
+	text-align: center;
 }
 
 .concept-img img {
@@ -454,7 +454,7 @@ i {
 }
 
 .news-title {
-	float: right;
+	text-align: center;
 }
 
 .news-contents {
@@ -476,7 +476,7 @@ i {
 }
 
 .hairstyle-title {
-	float: left;
+	text-align: center;
 }
 
 .hairstyle .imgs-left {
@@ -508,7 +508,7 @@ i {
 }
 
 .pricelist-title {
-	float: right;
+	text-align: center;
 }
 
 .pricelist-img img {
@@ -578,7 +578,7 @@ i {
 }
 
 .shopinfo-title {
-	float: left;
+	text-align: center;
 }
 
 .shopinfo .wrapper {
@@ -599,7 +599,7 @@ i {
 .shopinfo .wrapper .right-box h3 {
 	font-size: 1.2em;
 	font-weight: bold;
-	padding-bottom: 1em;
+	padding: .8em 0;
 	text-align: center;
 }
 

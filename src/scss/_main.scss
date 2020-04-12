@@ -465,7 +465,7 @@ i {
     padding: 0 20em;
   }
   &-title {
-    float: left;
+    text-align: center;
   }
   &-img {
     @include tb {
@@ -511,7 +511,7 @@ i {
     padding: 0 20em;
   }
   &-title {
-    float: right;
+    text-align: center;
   }
   &-contents {
     text-align: center;
@@ -537,7 +537,7 @@ i {
     padding: 0 20em;
   }
   &-title {
-    float: left;
+    text-align: center;
   }
   .imgs {
     &-left {
@@ -585,7 +585,7 @@ i {
     padding: 0 20em;
   }
   &-title {
-    float: right;
+    text-align: center;
   }
   &-img {
     @include tb {
@@ -664,7 +664,7 @@ i {
     padding: 0 20em;
   }
   &-title {
-    float: left;
+    text-align: center;
   }
   .wrapper {
     width: 100%;
@@ -705,7 +705,7 @@ i {
         // color: #fff;
       }
       h3 {
-        padding-bottom: 1em;
+        padding: .8em 0;
         font-size: 1.2em;
         font-weight: bold;
         text-align: center;
