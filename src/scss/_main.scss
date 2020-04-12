@@ -128,7 +128,6 @@ body {
   color: #000;
   z-index: 30; //重なり 1番下(z-index: 0;だとドロワーメニューで効かない)
   @include pc () {
-    margin: 0 0 1.5em;
     font-size: 2.4em;
   }
 
@@ -488,18 +487,20 @@ i {
     }
   }
   &-intro {
-    @include tb {
-      width: 45%;
-      float: right;
-    }
     width: 90%;
     margin: 1.5em auto 0;
     text-align: center;
     @include tb {
+      width: 45%;
+      float: right;
       margin: 0 auto;
     }
     p {
       line-height: 2em;
+      font-size: 1.0em;
+      @include pc () {
+      font-size: 1.2em;
+      }
     }
   }
 }
@@ -523,6 +524,9 @@ i {
       display: block;
       line-height: 2em;
       border: 1px solid #000;
+      @include pc () {
+        font-size: 1.2em;
+      }
       &-date {
         margin: 0 1em 0 0;
       }
@@ -675,16 +679,18 @@ i {
     @include pc() {
       display: flex;
     }
-    .left-box {
-      @include pc() {
-        position: relative;
-        width: 50%;
-      }
-    }
-    .left-box-map {
-      @include pc() {
-        height: 0;
-        padding-top: 56.25%;
+    .left {
+      &-box {
+        @include pc() {
+         position: relative;
+         width: 50%;
+         &-map {
+          @include pc() {
+           height: 0;
+           padding-top: 56.25%;
+          }
+         }
+        }
       }
     }
     .ggmap {
