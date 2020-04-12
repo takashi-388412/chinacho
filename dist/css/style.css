@@ -172,6 +172,7 @@ body {
 	color: #000;
 	height: 100%;
 	padding: 2em;
+	position: relative;
 }
 
 .parallax-bg {
@@ -179,7 +180,7 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 80vh;
+	height: 85vh;
 }
 
 /*各背景の画像*/
@@ -207,7 +208,7 @@ body {
 	font-weight: bold;
 	margin: 0 0 1em;
 	position: relative;
-	z-index: 30;
+	z-index: 0;
 }
 
 .btn {
@@ -250,40 +251,80 @@ i {
 	padding: 0 0 0 1em;
 }
 
+.fade-up {
+	opacity: 0;
+	-webkit-transform: translate(0, 45px);
+	-ms-transform: translate(0, 45px);
+	transform: translate(0, 45px);
+	-webkit-transition: all .8s;
+	transition: all .8s;
+}
+
+.fade-up.effect-scroll {
+	opacity: 1;
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	transform: translate(0, 0);
+}
+
+.fade-left {
+	-webkit-transform: translate(-10px, 0);
+	opacity: 0;
+	-ms-transform: translate(-10px, 0);
+	transform: translate(-10px, 0);
+}
+
+.fade-left.move {
+	-webkit-transition: all 1s;
+	-webkit-transform: translate(0, 0);
+	opacity: 1;
+	-ms-transform: translate(0, 0);
+	transform: translate(0, 0);
+	-webkit-transition: all 1.5s;
+	transition: all 1.5s;
+}
+
 #header {
-	background: transparent;
+	height: 76px;
 	padding: 10px;
 	position: fixed;
 	width: 100%;
 	z-index: 5;
 }
 
-#header.m_scroll {
-	background: rgba(0, 0, 0, 0.65);
-	-webkit-transition: .5s ease;
-	transition: .5s ease;
+.site-logo {
+	display: none;
 }
 
-.site-title {
-	float: left;
-	font-weight: bold;
-	height: 100%;
-	padding-left: 1em;
-	position: relative;
-}
-
-.site-title a {
+.site-logo a {
 	color: #fff;
+	display: block;
 	font-size: 1.6em;
 	line-height: 1.6em;
 	position: relative;
 	text-decoration: none;
-	width: 50%;
 	z-index: 3;
 }
 
-.site-title a:hover {
+.site-logo a:hover {
 	opacity: 0.5;
+}
+
+.site-logo a img {
+	height: auto;
+	width: 180px;
+}
+
+.slide-logo {
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	border-radius: 50%;
+	height: auto;
+	left: 50%;
+	position: fixed;
+	top: 45%;
+	transform: translate(-50%, -50%);
+	width: 180px;
 }
 
 .hamberger-menu {
@@ -341,7 +382,7 @@ i {
 }
 
 .nav {
-	background: rgba(0, 0, 0, 0.85);
+	background-color: rgba(166, 136, 118, 0.9);
 	display: table;
 	float: right;
 	height: 100vh;
@@ -374,12 +415,14 @@ i {
 
 .nav-item a {
 	color: #fff;
-	display: inline-block;
+	display: block;
 	font-size: 1.3em;
+	line-height: 40px;
 	text-decoration: none;
 }
 
 .nav-item a:hover {
+	border-bottom: 2px dashed red;
 	opacity: 0.5;
 }
 
@@ -655,7 +698,17 @@ i {
 	padding: 1.5em 0;
 }
 
-.site-title {
+#header {
+	background: #fff;
+}
+
+.site-logo {
+	display: initial;
+	float: left;
+	font-weight: bold;
+	height: 100%;
+	padding-left: 1em;
+	position: relative;
 	width: 20%;
 }
 
@@ -679,6 +732,7 @@ i {
 }
 
 .nav-item a {
+	color: #000;
 	font-size: 1.0em;
 	width: 100%;
 }
