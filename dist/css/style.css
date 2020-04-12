@@ -230,7 +230,7 @@ body {
 	font-weight: bold;
 	margin: 0 0 2em;
 	position: relative;
-	z-index: -1;
+	z-index: 30;
 }
 
 .heading::before,
@@ -669,6 +669,8 @@ i {
 }
 
 .shopinfo .wrapper .left-box {
+	background-color: black;
+	color: white;
 	height: 0;
 	overflow: hidden;
 	padding-bottom: 56.25%;
