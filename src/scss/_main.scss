@@ -307,7 +307,7 @@ transform : translate(0, 0);
 }
 .slide-logo {
   position: fixed;
-  width: 180px;
+  width: 150px;
   height: auto;
   border-radius: 50%;
   top: 45%;
@@ -443,7 +443,9 @@ transform : translate(0, 0);
     }
     &:hover {
       opacity: 0.5;
-      border-bottom: 2px dashed red;
+      @include pc() {
+        border-bottom: 2px dashed red;
+      }
     }
   }
 }
