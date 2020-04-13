@@ -177,7 +177,7 @@ body {
 
 .parallax-bg {
 	background-attachment: fixed;
-	background-position: center;
+	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 85vh;
@@ -328,7 +328,7 @@ i {
 	position: fixed;
 	top: 45%;
 	transform: translate(-50%, -50%);
-	width: 180px;
+	width: 150px;
 }
 
 .hamberger-menu {
@@ -427,7 +427,6 @@ i {
 }
 
 .nav-item a:hover {
-	border-bottom: 2px dashed red;
 	opacity: 0.5;
 }
 
@@ -717,6 +716,10 @@ i {
 	width: 20%;
 }
 
+.slide-logo {
+	width: 180px;
+}
+
 .hamberger-menu {
 	display: none;
 }
@@ -740,6 +743,10 @@ i {
 	color: #000;
 	font-size: 1.0em;
 	width: 100%;
+}
+
+.nav-item a:hover {
+	border-bottom: 2px dashed red;
 }
 
 .concept-intro p {
