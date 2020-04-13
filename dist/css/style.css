@@ -176,7 +176,6 @@ body {
 }
 
 .parallax-bg {
-	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -320,15 +319,7 @@ i {
 }
 
 .slide-logo {
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	border-radius: 50%;
-	height: auto;
-	left: 50%;
-	position: fixed;
-	top: 45%;
-	transform: translate(-50%, -50%);
-	width: 150px;
+	display: none;
 }
 
 .hamberger-menu {
@@ -690,6 +681,10 @@ i {
 	padding: 8em 10em;
 }
 
+.parallax-bg {
+	background-attachment: fixed;
+}
+
 .heading {
 	font-size: 2.0em;
 }
@@ -717,6 +712,15 @@ i {
 }
 
 .slide-logo {
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	border-radius: 50%;
+	display: initial;
+	height: auto;
+	left: 50%;
+	position: fixed;
+	top: 45%;
+	transform: translate(-50%, -50%);
 	width: 180px;
 }
 
