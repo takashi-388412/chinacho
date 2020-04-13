@@ -177,7 +177,7 @@ body {
 
 .parallax-bg {
 	background-attachment: fixed;
-	background-position: center;
+	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 85vh;
@@ -714,6 +714,10 @@ i {
 	padding-left: 1em;
 	position: relative;
 	width: 20%;
+}
+
+.slide-logo {
+	width: 180px;
 }
 
 .hamberger-menu {

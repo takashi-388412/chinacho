@@ -97,7 +97,8 @@ body {
 }
 .parallax-bg {
   background-attachment: fixed;
-  background-position: center;
+  // background-position: center;
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 85vh;
@@ -315,6 +316,9 @@ transform : translate(0, 0);
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+  @include pc() {
+    width: 180px;
+  }
 }
 
 // .site-title {
