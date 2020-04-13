@@ -386,7 +386,7 @@ i {
 }
 
 .nav {
-	background-color: rgba(166, 136, 118, 0.9);
+	background-color: rgba(166, 136, 118, 0.95);
 	display: table;
 	float: right;
 	height: 100vh;
