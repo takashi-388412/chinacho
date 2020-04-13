@@ -177,7 +177,7 @@ body {
 
 .parallax-bg {
 	background-attachment: fixed;
-	background-position: center center;
+	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 85vh;
@@ -335,7 +335,7 @@ i {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	float: right;
-	height: 32px;
+	height: 30px;
 	position: relative;
 	-webkit-transition: all .4s;
 	transition: all .4s;
@@ -344,12 +344,12 @@ i {
 }
 
 .hamberger-menu span {
-	background-color: #fff;
+	background-color: #000;
 	border-radius: 4px;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	display: inline-block;
-	height: 4px;
+	height: 3px;
 	left: 0;
 	position: absolute;
 	-webkit-transition: all .4s;
@@ -386,7 +386,7 @@ i {
 }
 
 .nav {
-	background-color: rgba(166, 136, 118, 0.9);
+	background-color: rgba(166, 136, 118, 0.95);
 	display: table;
 	float: right;
 	height: 100vh;
