@@ -96,11 +96,13 @@ body {
   }
 }
 .parallax-bg {
-  background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 85vh;
+  @include pc() {
+    background-attachment: fixed;//spだと画面が上手く表示できない
+  }
 }
 /*各背景の画像*/
 .img-bg-01 {
@@ -306,8 +308,12 @@ transform : translate(0, 0);
   }
 }
 .slide-logo {
+  display: none;//spだとかくついてしまう(iphoneしたのバーが原因)
+  // width: 150px;
+  @include pc() {
+  display:initial;
   position: fixed;
-  width: 150px;
+  width: 180px;
   height: auto;
   border-radius: 50%;
   top: 45%;
@@ -315,8 +321,6 @@ transform : translate(0, 0);
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  @include pc() {
-    width: 180px;
   }
 }
 
