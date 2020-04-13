@@ -56,9 +56,6 @@ body {
 #wrapper {
 
 }
-.content-wrapper  {
-  padding-top: 5em;
-}
 //top-image の背景画像
 .none {
   display: none;
@@ -70,104 +67,122 @@ body {
  }
  //page loading
 .loading {
-position: fixed;
-z-index: 100;
-top: 0;
-right: 0;
-bottom: 0;
-left: 0;
-background: #fff;
+  // position: fixed;
+  // z-index: 100;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+  // background: #fff;
   }
 .loading__img {
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%,-50%);
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%,-50%);
 }
-
 /*スクロールするコンテンツ*/
 .scrollbox {
-  height: 80vh;
+  height: 100%;
   color: #000;
   background-color: #fff;
+  padding: 2em;
+  position: relative; //slide-logoをもぐらせる
+  @include tb() {
+  padding: 5em;
+  }
+  @include pc() {
+  padding: 8em 10em;
+  }
 }
 .parallax-bg {
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 80vh;
+  height: 85vh;
 }
 /*各背景の画像*/
 .img-bg-01 {
-  background-image: url('../../src/img/Japan.jpg');
-// background-position: 50% 150px;
+  // background-image: url('../../src/img/shop_exterior.jpg');
+  background-image: url('../../src/img/bg1.jpg');
 }
 .img-bg-02 {
-  background-image: url('../../src/img/night_view.jpg');
+  // background-image: url('../../src/img/shop_inside.jpg');
+  background-image: url('../../src/img/bg2.jpg');
 }
 .img-bg-03 {
-  background-image: url('../../src/img/uyuni.jpg');
+  // background-image: url('../../src/img/shop_card.jpg');
+  background-image: url('../../src/img/bg3.jpg');
 }
 .img-bg-04 {
-  background-image: url('../../src/img/Venezia.jpg');
+  // background-image: url('../../src/img/shop_exterior.jpg');
+  background-image: url('../../src/img/bg4.jpg');
+}
+.img-bg-05 {
+  // background-image: url('../../src/img/shop_exterior.jpg');
+  background-image: url('../../src/img/bg5.jpg');
 }
 // ==================================
 // parts(ボタン・h2:見出し,h3:小見出し
 // などの何回も使う部品)
 // ==================================
 .heading {
-  margin: 0 0 2em;
+  margin: 0 0 1em;
   position: relative;
   display: inline-block;
-  font-size: 1.6rem;
+  font-size: 1.8em;
   font-weight: bold;
   color: #000;
-  z-index: 30; //重なり 1番下(z-index: 0;だとドロワーメニューで効かない)
+  z-index: 0; //重なり 1番下(z-index: 0;だとドロワーメニューで効かない)
+  @include pc () {
+    font-size: 2.0em;
+  }
 
-  &::before {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    border-bottom: 1px solid #000;
-  }
-  &::after {
-   @extend ::before;
-    bottom: -5px;
-  }
+//   &::before {
+//     content: '';
+//     display: inline-block;
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     width: 100%;
+//     border-bottom: 1px solid #000;
+//   }
+//   &::after {
+//    @extend ::before;
+//     bottom: -5px;
+//   }
 }
 .btn {
-  margin: 2em 5em;
+  margin: 2em auto 1em;
   text-align: center;
   @include pc {
-    margin-left: 20vw;
-    margin-right: 20vw;
+    width: 300px;
   }
   .more {
-    padding: .5em 0;
+    padding: .8em 0;
     color: #fff;
     background-color: #000;
     display: block;
     text-decoration: none;
+    @include pc() {
+      padding: 1.5em 0;
+    }
     &:hover {
       color: #000;
-      background-color: #fff;
-      border-bottom: solid #808080;
+      background-color: #f8f8f8;
     }
   }
 }
 .button {
   display: block;
-  background-color:#d3d3d3;
+  background-color:#000;
   padding: 1.0em;
   & .reserve{
     text-align: center;
     display: block;
     text-decoration: none;
-    color: #000;
+    color: #fff;
   }
   &:hover {
     opacity: 0.5;
@@ -177,111 +192,153 @@ i {
   float: left;
   padding: 0 0 0 1em;
 }
-// //section毎 ふわっとfadein
-// .fade-up {
-// opacity : 0;
-// transform : translate(0, 45px);
-// // transition : all 300ms;
-// transition : all .8s;
-// }
-// .fade-up.effect-scroll {
-// opacity : 1;
-// transform : translate(0, 0);
-// }
-// //fadein left(style)
-// .fade-left {
-//   transform: translate(-10px,0);
-//   -webkit-transform: translate(-10px, 0);
+//section毎 ふわっとfadein 
+.fade-up {
+opacity : 0;
+transform : translate(0, 45px);
+// transition : all 300ms;
+transition : all .8s;
+}
+.fade-up.effect-scroll {
+opacity : 1;
+transform : translate(0, 0);
+}
+//fadein left(style)
+.fade-left {
+  transform: translate(-10px,0);
+  -webkit-transform: translate(-10px, 0);
+  opacity: 0;
+}
+.fade-left.move {
+  transition: all 1.5s;
+  transform: translate(0, 0);
+  -webkit-transition: all 1s;
+  -webkit-transform: translate(0, 0);
+  opacity: 1;
+}
+//top-text 1文字ずつfadein
+// .text {
+//   text-align: center;
 //   opacity: 0;
 // }
-// .fade-left.move {
-//   transition: all 1.5s;
-//   transform: translate(0, 0);
-//   -webkit-transition: all 1s;
-//   -webkit-transform: translate(0, 0);
+// .text-move {
+//   opacity: 0;
+//   display: inline-block;
+//   transform: scale(1.25) translate(8px, 4px);
+//   font-size: 50px;
+//   letter-spacing: 0.02em;
+// }
+// .text-move:nth-child(1) {
+//   transition: opacity 1.2s ease 0.1s, transform 1.2s ease 0.2s;
+// }
+// .text-move:nth-child(2) {
+//   transition: opacity 1.2s ease 0.2s, transform 1.2s ease 0.25s;
+// }
+// .text-move:nth-child(3) {
+//   transition: opacity 1.2s ease 0.25s, transform 1.2s ease 0.3s;
+// }
+// .text-move:nth-child(4) {
+//   transition: opacity 1.2s ease 0.3s, transform 1.2s ease 0.35s;
+// }
+// .text-move:nth-child(5) {
+//   transition: opacity 1.2s ease 0.35s, transform 1.2s ease 0.4s;
+// }
+// .text-move:nth-child(6) {
+//   transition: opacity 1.2s ease 0.4s, transform 1.2s ease 0.45s;
+// }
+// .text-move:nth-child(7) {
+//   transition: opacity 1.2s ease 0.45s, transform 1.2s ease 0.5s;
+// }
+// .text-move:nth-child(8) {
+//   transition: opacity 1.2s ease 0.5s, transform 1.2s ease 0.55s;
+// }
+// .text.active {
 //   opacity: 1;
 // }
-//top-text 1文字ずつfadein
-.text {
-  text-align: center;
-  opacity: 0;
-}
-.text-move {
-  opacity: 0;
-  display: inline-block;
-  transform: scale(1.25) translate(8px, 4px);
-  font-size: 50px;
-  letter-spacing: 0.02em;
-}
-.text-move:nth-child(1) {
-  transition: opacity 1.2s ease 0.1s, transform 1.2s ease 0.2s;
-}
-.text-move:nth-child(2) {
-  transition: opacity 1.2s ease 0.2s, transform 1.2s ease 0.25s;
-}
-.text-move:nth-child(3) {
-  transition: opacity 1.2s ease 0.25s, transform 1.2s ease 0.3s;
-}
-.text-move:nth-child(4) {
-  transition: opacity 1.2s ease 0.3s, transform 1.2s ease 0.35s;
-}
-.text-move:nth-child(5) {
-  transition: opacity 1.2s ease 0.35s, transform 1.2s ease 0.4s;
-}
-.text-move:nth-child(6) {
-  transition: opacity 1.2s ease 0.4s, transform 1.2s ease 0.45s;
-}
-.text-move:nth-child(7) {
-  transition: opacity 1.2s ease 0.45s, transform 1.2s ease 0.5s;
-}
-.text-move:nth-child(8) {
-  transition: opacity 1.2s ease 0.5s, transform 1.2s ease 0.55s;
-}
-.text.active {
-  opacity: 1;
-}
-.text.active .text-move {
-  opacity: 1;
-  transform: scale(1) translate(0);
-}
+// .text.active .text-move {
+//   opacity: 1;
+//   transform: scale(1) translate(0);
+// }
 // ==================================
 // header
 // ==================================
 #header {
   position: fixed;
   width: 100%;
-  // height: 58px;
+  height: 76px;
   padding: 10px;
-  background: transparent;
+  // background: transparent;
   z-index: 5; // 重なり一番上
+  @include pc () {
+    background: #fff;
+  }
 }
-#header.m_scroll {
-  background: rgba(0, 0, 0, .65);
-  transition: .5s ease;
-}
-.site-title {
-  float: left; //hamberger-menuとfloat
-  padding-left: 1em;
-  position: relative;
-  height: 100%;
-  // z-index: 3; //重なり 1番上
-  font-weight: bold;
+// #header.m_scroll {
+//   background: rgba(0, 0, 0, .65);
+//   transition: .5s ease;
+// }
+.site-logo {
+  display: none;
   @include pc() {
+    display: initial;
     width: 20%; //sticky header → 80%
+    float: left; //hamberger-menuとfloat
+    padding-left: 1em;
+    position: relative;
+    height: 100%;
+    font-weight: bold;
   }
   & a {
     position: relative; //z-indexを指定したいので,position指定
+    display: block;
     text-decoration: none;
     color: #fff;
-    width: 50%;
     font-size: 1.6em;
     line-height: 1.6em;
     z-index: 3; //重なり 1番上
     &:hover {
       opacity: 0.5;
     }
+    & img {
+      width: 180px;
+      height: auto;
+    }
   }
 }
+.slide-logo {
+  position: fixed;
+  width: 180px;
+  height: auto;
+  border-radius: 50%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+// .site-title {
+//   float: left; //hamberger-menuとfloat
+//   padding-left: 1em;
+//   position: relative;
+//   height: 100%;
+//   font-weight: bold;
+//   @include pc() {
+//     width: 20%; //sticky header → 80%
+//   }
+//   & a {
+//     position: relative; //z-indexを指定したいので,position指定
+//     text-decoration: none;
+//     color: #fff;
+//     width: 50%;
+//     font-size: 1.6em;
+//     line-height: 1.6em;
+//     z-index: 3; //重なり 1番上
+//     &:hover {
+//       opacity: 0.5;
+//     }
+//   }
+// }
 //hamberger-menu 位置
 .hamberger-menu {
   float: right; //site-logoとfloat
@@ -332,12 +389,13 @@ i {
   float: right;
   position: absolute; 
   top: 0;
-  right: -100%; //hambergermenuをクリックするまで、画面外(右)へ隠しておく
   // right: 0%;
-  background: rgba(0, 0, 0, .85);
-  width: 100%;
-  height: 100vh;
+  right: -100%; //hambergermenuをクリックするまで、画面外(右)へ隠しておく
+  background-color: rgba(166, 136, 118, 0.9);
+  // background: rgba(0, 0, 0, .85);
   // margin-top: 58px;
+  width: 100vw;
+  height: 100vh;
   transition: .5s;
   //navgation_menu用
   display: table;
@@ -366,23 +424,26 @@ i {
 .nav-item {
   text-align: center; 
   padding: 20px;
+  font-weight: bold;
   @include pc () {//数が多いとcolumn落ちするので気を付ける！！
     display: inline-block;
     padding: 10px;
     width: 15%;
   }
   & a {
+    display: block;
+    font-size: 1.3em;
+    line-height: 40px;
     color: #fff;
     text-decoration: none;
-    display: inline-block;
-    // border-bottom: 1px solid #fff;
-    font-size: 1.3em;
     @include pc() {
       width: 100%;
       font-size: 1.0em;
+      color: #000;
     }
     &:hover {
       opacity: 0.5;
+      border-bottom: 2px dashed red;
     }
   }
 }
@@ -454,16 +515,15 @@ i {
 // concept
 // ==================================
 .concept {
-  margin: 2em 0 0;
-  padding: 0 2em;
-  @include tb {
-    padding: 0 10em;
-  }
-  @include pc {
-    padding: 0 20em;
-  }
+  // padding: 0 2em;
+  // @include tb {
+  //   padding: 0 10em;
+  // }
+  // @include pc {
+  //   padding: 0 20em;
+  // }
   &-title {
-    float: left;
+    text-align: center;
   }
   &-img {
     @include tb {
@@ -481,18 +541,20 @@ i {
     }
   }
   &-intro {
-    @include tb {
-      width: 45%;
-      float: right;
-    }
     width: 90%;
     margin: 1.5em auto 0;
     text-align: center;
     @include tb {
+      width: 45%;
+      float: right;
       margin: 0 auto;
     }
     p {
       line-height: 2em;
+      font-size: 1.0em;
+      @include pc () {
+      font-size: 1.2em;
+      }
     }
   }
 }
@@ -500,22 +562,25 @@ i {
 // news
 // ==================================
 .news {
-  margin: 5em 0 0;
-  padding: 0 2em;
-  @include tb {
-    padding: 0 10em;
-  }
-  @include pc {
-    padding: 0 20em;
-  }
+  // padding: 0 2em;
+  // @include tb {
+  //   padding: 0 10em;
+  // }
+  // @include pc {
+  //   padding: 0 20em;
+  // }
   &-title {
-    float: right;
+    text-align: center;
   }
   &-contents {
     text-align: center;
     .content {
       display: block;
       line-height: 2em;
+      border: 1px solid #000;
+      @include pc () {
+        font-size: 1.2em;
+      }
       &-date {
         margin: 0 1em 0 0;
       }
@@ -526,16 +591,15 @@ i {
 // hairstyle
 // ==================================
 .hairstyle {
-  margin: 5em 0 0;
-  padding: 0 2em;
-  @include tb {
-    padding: 0 10em;
-  }
-  @include pc {
-    padding: 0 20em;
-  }
+  // padding: 0 2em;
+  // @include tb {
+  //   padding: 0 10em;
+  // }
+  // @include pc {
+  //   padding: 0 20em;
+  // }
   &-title {
-    float: left;
+    text-align: center;
   }
   .imgs {
     &-left {
@@ -574,16 +638,15 @@ i {
 // pricelist
 // ==================================
 .pricelist {
-  margin: 5em 0 0;
-  padding: 0 2em;
-  @include tb {
-    padding: 0 10em;
-  }
-  @include pc {
-    padding: 0 20em;
-  }
+  // padding: 0 2em;
+  // @include tb {
+  //   padding: 0 10em;
+  // }
+  // @include pc {
+  //   padding: 0 20em;
+  // }
   &-title {
-    float: right;
+    text-align: center;
   }
   &-img {
     @include tb {
@@ -653,82 +716,60 @@ i {
 // shopinfo
 // ==================================
 .shopinfo {
-  margin: 5em 0 0;
-  padding: 0 2em;
-  @include tb {
-    padding: 0 10em;
-  }
-  @include pc {
-    // padding: 0 20em;
-  }
+  // padding: 0 2em;
+  // @include tb {
+  //   padding: 0 10em;
+  // }
+  // @include pc {
+  //   padding: 0 20em;
+  // }
   &-title {
-    float: left;
+    text-align: center;
   }
   .wrapper {
     width: 100%;
     margin: 0 auto;
     // color: #fff;
     @include pc() {
-      display: table;
+      display: flex;
     }
-
-.left-box {
-  color: white;
-  background-color: black;
-position: relative;
-padding-bottom: 56.25%;
-padding-top: 30px;
-height: 0;
-overflow: hidden;
-@include pc(){
-  width: 50%;
-  display: table-cell;
-}
-}
- 
-.left-box iframe,
-.left-box object,
-.left-box embed {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-@include pc(){
-
-}
-}
-    // .left-box {
-    //   position: relative;
-    //   width: 100%;
-    //   height: 100%;
-    //   padding-top: 60%; //高さ ÷ 横 × 100
-    //   @include pc() {
-    //     display: table-cell;
-    //     width: 50%;
-    //   }
-    //   & iframe {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //   }
-    // }
+    .left {
+      &-box {
+        @include pc() {
+         position: relative;
+         width: 50%;
+         &-map {
+          @include pc() {
+           height: 0;
+           padding-top: 56.25%;
+          }
+         }
+        }
+      }
+    }
+    .ggmap {
+        max-height: 350px;
+        max-width: 100%;
+      @include pc () {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; //指定しないと広がらない
+        height: 100%; //指定しないと広がらない
+        max-height: 100%;
+      }
+    }
     .right-box {
-      // background-color: #000;
-      padding-top: 1em;
+      background: #f8f8ff	;
       @include pc() {
-        display: table-cell;
-        padding-left: 0.5em;
-        padding-top: 0;
         width: 50%;
-        height: 100%;
+        // color: #fff;
       }
       h3 {
-        padding-bottom: 1em;
+        padding: .8em 0;
         font-size: 1.2em;
         font-weight: bold;
+        text-align: center;
       }
       table {
         width: 100%;
@@ -744,14 +785,6 @@ height: 100%;
         width: 70%;
         line-height: 1.5em;
       }
-      // .intro {
-      //   line-height: 2em;
-      //   font-size: .8em;
-      //   border-bottom: 1px solid #808080;
-      //   .title {
-      //     margin: 0 1em 0 0;
-      //   }
-      // }
     }
   }
 }
@@ -795,18 +828,7 @@ height: 100%;
 .footer {
   color: #fff;
   background-color: #000;
-  margin: 3em 0 0;
   padding: 1.2em 0;
   text-align: center;
   font-size: .8em;
-  position: static;
-}
-
-#wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-footer{
-  margin-top: auto;
 }

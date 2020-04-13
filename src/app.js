@@ -33,10 +33,10 @@ $(function () {
   // sticky header 
 jQuery(window).on('scroll',function($) {
   if ( 500 < jQuery(this).scrollTop()) {
-    jQuery('#header').addClass('m_scroll');
+    // jQuery('#header').addClass('m_scroll');
     jQuery('.reserve-btn').addClass('active2');
   } else {
-    jQuery('#header').removeClass('m_scroll');
+    // jQuery('#header').removeClass('m_scroll');
     jQuery('.reserve-btn').removeClass('active2');
   }
 });
@@ -134,4 +134,15 @@ $(function() {
       }
     });
 　});
+});
+//scroll-down
+$(function(){
+  $('a[href^="#"]').click(function(){
+    var speed = 1250;
+    var href= $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top;
+    $("html, body").animate({scrollTop:position}, speed, "swing");
+    return false;
+  });
 });
