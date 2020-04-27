@@ -421,6 +421,41 @@ i {
 	opacity: 0.5;
 }
 
+.staff-title {
+	text-align: center;
+}
+
+.staff-left {
+	margin: 0 0 2rem;
+	width: 100%;
+}
+
+.staff-right {
+	width: 100%;
+}
+
+.staff img {
+	float: left;
+	width: 50%;
+}
+
+.staff p {
+	float: left;
+	line-height: 30px;
+	margin: 1rem auto 0;
+	text-align: center;
+	width: 50%;
+}
+
+.staff .name {
+	font-size: 2rem;
+}
+
+.staff .name span {
+	display: block;
+	font-size: 1.2rem;
+}
+
 .concept-title {
 	text-align: center;
 }
@@ -641,6 +676,17 @@ i {
 
 .scrollbox {
 	padding: 5em;
+}
+
+.staff-left {
+	float: left;
+	margin: 0;
+	width: 50%;
+}
+
+.staff-right {
+	float: left;
+	width: 50%;
 }
 
 .concept-img {
